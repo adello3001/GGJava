@@ -1,6 +1,6 @@
 package fields;
 
-public class CarExample {
+public class CarExample2 {
 
 	public static void main(String[] args) {
 		Car car = new Car();
@@ -8,8 +8,8 @@ public class CarExample {
 		for(int i=1; i<=5; i++) {
 			int problemLocation = car.run();
 			if(problemLocation != 0) {
-				System.out.println(car.tires[problemLocation-1].location + "±³Ã¼");
-				car.tires[problemLocation-1] = new HankookTire(car.tires[problemLocation-1].location, 15);
+				String location = car.getLocation(problemLocation);
+				car.changeTire(new HankookTire(car.tires[problemLocation-1].location, 15), problemLocation);
 			}
 			System.out.println("--------------------------------------");
 		}
