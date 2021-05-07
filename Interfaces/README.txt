@@ -19,7 +19,7 @@
 7. COM (Component Object Model)
 8. DCOM (Distributed Component Object Model)
 
-(자바 인터페이스)
+(Java)
 interface name {
 	type constant = value;						// 상수필드
 	type method(parameter, ...);				// 추상 메소드
@@ -29,9 +29,11 @@ interface name {
 	static type method(parameter, ...) { ... };	// 정적 메소드
 }
 
-(예)
-interface IAbc {
-	void plus();
-}
+(C++)
+interface IUnknown {
+	virtual HRESULT QueryInterface(REFIID riid, void **ppvObject) = 0;
+	virtual ULONG AddRef() = 0;
+	virtual ULONG Release() = 0;
+};
 
 

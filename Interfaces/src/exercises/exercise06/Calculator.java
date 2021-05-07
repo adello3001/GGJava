@@ -1,7 +1,7 @@
 package exercises.exercise06;
 
 public class Calculator implements Calc {
-	private double total = 0.0;
+	private double total = 0.0; // 인스턴스 필드
 	
 	Calculator() {}
 	Calculator(double value) {
