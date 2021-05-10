@@ -1,10 +1,10 @@
 package abstracts2;
 
 public class Bird extends Animal {
-	Bird () {
+	Bird() {
 		this.kind = "새";
 	}
-	
+
 	@Override
 	public void move() {
 		System.out.println("새는 난다.");
@@ -12,7 +12,7 @@ public class Bird extends Animal {
 	
 	@Override
 	public void sound() {
-		System.out.println("새는 지저귄다.");
+		System.out.println("새는 기저귄다.");
 	}
 	
 	public void fly() {

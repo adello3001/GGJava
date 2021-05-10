@@ -8,10 +8,10 @@ public class A {
 	// C fieldC = new C();
 	B fieldB = null;
 	C fieldC = null;
-	B fieldX = this.new B("B fieldX");
-	B fieldY = null;
+	B filedX = this.new B("B filedX");
+	B filedY = null;
 	
-	// 정적 필드 this(객체레퍼런스)를 가지고 있지 않음
+	// 정적 필드는 this(객체레퍼런스)를 가지고 있지 않음
 	// static B staticFieldB = new B();
 	// static B staticFieldB = this.new B();
 	
@@ -22,7 +22,7 @@ public class A {
 		System.out.println("A class");
 		this.fieldB = new B();
 		this.fieldC = new C();
-		this.fieldY = this.new B("B fieldY");
+		this.filedY = this.new B("B fieldY");
 	}
 	
 	class B {
@@ -53,6 +53,7 @@ public class A {
 		}
 	}
 	
+	
 	// 다른 패키지와 클래스 이름이 충돌될 때 사용
 	// A.B fieldB = new A.B();
 	// A.C fieldC = new A.C();
@@ -63,12 +64,11 @@ public class A {
 	}
 	
 	// 정적 멤버 메소드
-	// 정적 멤버 메소드는 객체으 this를 가지고 있지 않다.
+	// 정적 메버 메소드는 객체의 this를 가지고 있지 않다.
 	// 인스턴스 멤버 클래스를 생성할 수 없다.
 	static void staticMethod() {
 		// B staticLocalB = new B("staticLocalB");
 		// B staticLocalB = this.new B("staticLocalB");
 		C staticLocalC = new C("staticLocalC");
 	}
-	
 }

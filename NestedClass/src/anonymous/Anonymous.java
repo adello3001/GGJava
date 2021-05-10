@@ -15,14 +15,14 @@ public class Anonymous {
 	
 	void method1() {
 		Person localVar = new Person() {
-			void work() {
+			void walk() {
 				System.out.println("산책");
 			}
 			
 			@Override
 			void wake() {
 				System.out.println("7시에 기상");
-				work();
+				walk();
 			}
 		};
 		
@@ -32,4 +32,5 @@ public class Anonymous {
 	void method2(Person person) {
 		person.wake();
 	}
+
 }

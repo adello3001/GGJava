@@ -20,20 +20,17 @@ public class AnonymousExample2 {
 		};
 		
 		anony.method2(ps);
-
+		
 		anony.method2(new Person() {
 			int km = 42;
-			void run(int km) {
-				this.km = km;
-				for(int cnt = 0; cnt <= km; cnt++) {
-					System.out.printf("현재(%d/%d)km 를 달리고 있습니다.\n", cnt, km);
-				}
+			void run() {
+				System.out.printf("(%d)Km를 달린다\n", km);
 			}
 			
 			@Override
 			void wake() {
 				System.out.println("4시에 기상");
-				run(42);
+				run();
 			}
 		});
 	}

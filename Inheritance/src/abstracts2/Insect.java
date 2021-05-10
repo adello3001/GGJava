@@ -14,7 +14,7 @@ public class Insect extends Animal {
 	public void sound() {
 		System.out.println("곤충은 작은 소리를 낸다.");
 	}
-	
+
 	public void crawl() {
 		System.out.println("곤충은 기어 다닌다.");
 	}

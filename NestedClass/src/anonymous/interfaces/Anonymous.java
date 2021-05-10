@@ -1,5 +1,5 @@
 /*
- * [劳疙 备泅 按眉]
+ * 劳疙 备泅 按眉
  */
 package anonymous.interfaces;
 
@@ -45,4 +45,5 @@ public class Anonymous {
 		rc.turnOn();
 		rc.turnOff();
 	}
+
 }

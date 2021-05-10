@@ -25,7 +25,7 @@ public class Television implements RemoteControl {
 			volumn = RemoteControl.MAX_VALUE;
 		}
 		else if(volumn < RemoteControl.MIN_VALUE) {
-			volumn = RemoteControl.MIN_VALUE; 
+			volumn = RemoteControl.MIN_VALUE;
 		}
 		else {
 			this.volumn = volumn;
@@ -45,5 +45,4 @@ public class Television implements RemoteControl {
 			System.out.printf("[%s] 무음해제\n", this.model);
 		}
 	}
-
 }

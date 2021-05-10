@@ -8,8 +8,8 @@ class C extends A {}
 class D extends B {}
 class E extends C {}
 
+
 public class PromotionExample {
-	
 	public static void main(String[] args) {
 		System.out.println("Promotion Example");
 		
@@ -25,7 +25,7 @@ public class PromotionExample {
 		
 		B b1 = d;
 		C c1 = e;
-		
+
 		// Type mismatch: cannot convert
 		/*
 		B b2 = c;
@@ -36,5 +36,5 @@ public class PromotionExample {
 		E e2 = d;
 		*/
 	}
-	
+
 }

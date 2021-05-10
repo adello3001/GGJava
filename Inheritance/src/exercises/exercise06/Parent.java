@@ -5,11 +5,11 @@ public class Parent {
 	
 	public Parent() {
 		this("¥Î«—πŒ±π");
-		System.out.println("Parent() call");
+		System.out.println("2. Parent() call");
 	}
 	
 	public Parent(String nation) {
 		this.nation = nation;
-		System.out.println("Parent(String nation) call");
+		System.out.println("1. Parent(String nation) call");
 	}
 }

@@ -8,15 +8,14 @@ package windows;
 public class Button {
 	OnClickListener listener;
 	
-	/*
 	Button() {
 		System.out.println("Button Class: Constructor...");
 	}
-	*/
 	
 	void setOnClickListener(OnClickListener listener) {
 		this.listener = listener;
 	}
+	
 	
 	void touch() {
 		if(this.listener != null) {
@@ -24,7 +23,7 @@ public class Button {
 		}
 	}
 	
-	interface OnClickListener { // Listener
-		void onClick(); // 이벤트 핸들러
+	interface OnClickListener {
+		void onClick(); 
 	}
 }

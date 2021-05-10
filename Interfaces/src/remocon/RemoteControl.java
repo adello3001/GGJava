@@ -1,7 +1,7 @@
 package remocon;
 
 public interface RemoteControl {
-	// 상수
+	// 상수: 관례적으로 대문자
 	public static final int RC_VALUE = 5;
 	public int MAX_VALUE = 10;
 	public int MIN_VALUE = 0;
@@ -15,7 +15,7 @@ public interface RemoteControl {
 	 * 새로 추가(SmartTV 용)
 	 * 1. 디폴트 메소드를 통해서 인터페이스를 확장
 	 * 2. 하위 호환성을 유지
-	 */
+	*/
 	default public void setChannel(int channel) {
 		System.out.println("채널변경");
 	}
@@ -29,7 +29,7 @@ public interface RemoteControl {
 		}
 	}
 	
-	static void changeBettery() {
+	static void changeBattery() {
 		System.out.println("배터리 교환");
 	}
 	
@@ -38,6 +38,5 @@ public interface RemoteControl {
 		rc.setMute(true);
 		rc.setVolumn(5);
 		rc.turnOff();
-	}
-	
+	}	
 }

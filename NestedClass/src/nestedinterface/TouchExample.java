@@ -7,5 +7,6 @@ public class TouchExample {
 		
 		btn.setOnTouchListener(new TouchListener());
 		btn.touch();
+		
 	}
 }

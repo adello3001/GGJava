@@ -27,11 +27,11 @@ public class Button {
 		}
 		
 		if(this.touchListener != null) {
-			this.touchListener.onTouch("임무 완료");
+			this.touchListener.onTouch("임무 완료!");
 		}
 	}
 	
-	interface OnClickListener { // Listener
-		void onClick(); // 이벤트 핸들러
+	interface OnClickListener {
+		void onClick();
 	}
 }

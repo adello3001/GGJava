@@ -5,11 +5,14 @@ public class Child extends Parent {
 	
 	public Child() {
 		this("홍길동");
-		System.out.println("Child() call");
+		System.out.println("4. Child() call");
+		
 	}
 	
 	public Child(String name) {
-		this.name = name;
-		System.out.println("Child(String name) call");
+		// 부모의 디폴트 생성자 super()가 호출 
+		this.name = name; 
+		System.out.println("3. Child(String name) call");
 	}
+
 }

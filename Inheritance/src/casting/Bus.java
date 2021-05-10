@@ -11,6 +11,5 @@ public class Bus extends Vehicle {
 	
 	int getStation() {
 		return station;
-		
 	}
 }

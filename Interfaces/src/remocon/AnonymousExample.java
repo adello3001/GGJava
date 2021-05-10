@@ -7,7 +7,7 @@ package remocon;
 public class AnonymousExample {
 
 	public static void main(String[] args) {
-		RemoteControl radio = new RemoteControl() {
+		RemoteControl radio =  new RemoteControl() {
 			public void turnOn() {
 				System.out.println("Radio On");
 			}
@@ -19,11 +19,10 @@ public class AnonymousExample {
 			public void setVolumn(int volumn) {
 				System.out.println("Radio Volumn");
 			}
-		}; // 반드시 세미콜론(;)이 있어야 함.
+		}; // 반드시 세미콜론(;)이 있어야 함. 
 		
 		RemoteControl.control(radio);
 		// RemoteControl.control(new Radio());
-
 	}
 
 }

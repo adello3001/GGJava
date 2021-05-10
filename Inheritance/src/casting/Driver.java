@@ -11,5 +11,5 @@ public class Driver {
 		else {
 			System.out.println("vehicle is Unknown!!!");
 		}
-	}	
+	}
 }

@@ -12,7 +12,9 @@ public class AExample {
 		/*
 		 * 내부 클래스 생성 및 메소드 접근
 		 */
-		// A.B b = new A.B();  --X
+		// 정적 멤버 클래스
+		// A.B bobj = new A.B();
+		
 		A.B bobj = abc.new B();
 		bobj.methodB();
 	}

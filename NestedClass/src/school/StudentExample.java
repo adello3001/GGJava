@@ -10,8 +10,8 @@ public class StudentExample {
 		int age = student.getAge();
 		String name = student.getName();
 		
-		System.out.println("> age: " + age);
-		System.out.println("> name: " + name);
+		System.out.println("> age:" + age);
+		System.out.println("> name:" + name);
 		
 		student.information();
 	}

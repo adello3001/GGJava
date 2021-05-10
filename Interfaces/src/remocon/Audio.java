@@ -1,7 +1,6 @@
 package remocon;
 
 public class Audio implements RemoteControl {
-
 	private int volumn;
 
 	@Override
@@ -20,7 +19,7 @@ public class Audio implements RemoteControl {
 			volumn = RemoteControl.MAX_VALUE;
 		}
 		else if(volumn < RemoteControl.MIN_VALUE) {
-			volumn = RemoteControl.MIN_VALUE; 
+			volumn = RemoteControl.MIN_VALUE;
 		}
 		else {
 			this.volumn = volumn;

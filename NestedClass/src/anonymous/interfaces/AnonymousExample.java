@@ -6,7 +6,6 @@ public class AnonymousExample {
 		Anonymous anony = new Anonymous();
 		// anony.field.turnOn();
 		// anony.field.turnOff();
-		
 		anony.on();
 		anony.off();
 		anony.audio();
@@ -19,7 +18,7 @@ public class AnonymousExample {
 			@Override
 			public void turnOff() {
 				System.out.println("SmartTV Off");
-			}
+			}			
 		});
 	}
 }

@@ -7,7 +7,7 @@ public class Tiger extends Cat {
 	
 	@Override
 	public void move() {
-		System.out.println("호랑이는 걷거나 달린다.");
+		System.out.println("호랑이 걷거나 달린다.");
 	}
 	
 	@Override

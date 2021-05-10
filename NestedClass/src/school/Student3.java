@@ -1,5 +1,6 @@
 /*
  * [학사행정]
+ * 1. 학생(student)
  */
 package school;
 
@@ -18,7 +19,7 @@ public class Student3 {
 		this.tel = t;
 		this.age = a;
 	}
-		
+	
 	void information() {
 		System.out.printf("Student:name(%s), tel(%s), age(%d)\n", this.name, this.tel, this.age);
 	}
@@ -26,11 +27,11 @@ public class Student3 {
 	void setName(String name) {
 		this.name = name;
 	}
-		
+	
 	String getName() {
 		return this.name;
 	}
-		
+	
 	int getAge() {
 		return this.age;
 	}
@@ -48,11 +49,10 @@ public class Student3 {
 				return this.kor + this.eng + this.math;
 			}
 		}
-				
+		
 		Score score = new Score(kor, eng, math);
 		int tot = score.total();
 		
 		return tot;
 	}
 }
-

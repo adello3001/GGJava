@@ -7,9 +7,8 @@ public class Searcher implements Searchable {
 		System.out.printf("Searcher:search(%s)\n", url);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String args[]) {
 		Searcher search = new Searcher();
-		search.search("http://naver.com");
+		search.search("https://naver.com");
 	}
-
 }

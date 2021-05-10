@@ -8,10 +8,11 @@ public class BusExample {
 		vehicle.run();
 		
 		// error
-		// System.out.println("station" + vehicle.getStation());
+		// System.out.println("station:" + vehicle.getStation());
 		
 		Bus bus = (Bus)vehicle;
 		System.out.println("station 1:" + bus.getStation());
 		System.out.println("station 2:" + ((Bus)vehicle).getStation());
+		
 	}
 }

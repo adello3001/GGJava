@@ -9,4 +9,5 @@ public class Child extends Parent {
 		// this.name = name;
 		this.studentNo = studentNo;
 	}
+
 }

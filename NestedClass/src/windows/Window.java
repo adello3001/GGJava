@@ -5,8 +5,8 @@ public class Window {
 	Button button2 = new Button();
 	Button button3 = new Button();
 	
+	
 	Button.OnClickListener listener = new Button.OnClickListener() {
-		
 		@Override
 		public void onClick() {
 			System.out.println("전화를 겁니다.");
@@ -23,4 +23,5 @@ public class Window {
 			}
 		});
 	}
+			
 }

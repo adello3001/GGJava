@@ -9,5 +9,4 @@ public class SmartTelevisionExample {
 		stv.setVolumn(15);
 		stv.turnOff();
 	}
-
 }

@@ -7,7 +7,6 @@ public class Main {
 		win.button1.touch();
 		win.button2.touch();
 		win.button3.touch();
-
+		
 	}
-
 }
