@@ -27,7 +27,7 @@ public class Diamond {
 			int cnt = MAX_ROW - col;
 			
 			for(int x = 0; x < cnt; x++) {
-				list[row][col] = "*";
+				list[row][col] = '*';
 				col += 2;
 			}
 		}
@@ -40,12 +40,12 @@ public class Diamond {
 			}
 			System.out.println();
 		}
-	
-	for(int row = MAX_ROW - 2; row >= 0; row--) {
-		for(char x : list[row]) {
-			System.out.printf("%c", x);
-		}
-		System.out.println();
+
+		for(int row = MAX_ROW - 2; row >= 0; row--) {
+			for(char x : list[row]) {
+				System.out.printf("%c", x);
+			}
+			System.out.println();
 		}
 	}
 }

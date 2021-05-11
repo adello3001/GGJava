@@ -5,8 +5,7 @@ public class Diamond2 {
 	static final int HAF_ROW = 5;
 	static final int MAX_COL = 9;
 	
-	// char[][] list = new char[MAX_ROW][MAX_COL];
-	char[][] list = new char[9][9];
+	char[][] list = new char[MAX_ROW][MAX_COL];
 	
 	public static void main(String[] args) {
 		Diamond2 triangle = new Diamond2();
@@ -29,7 +28,7 @@ public class Diamond2 {
 			int cnt = HAF_ROW - col;
 			
 			for(int x = 0; x < cnt; x++) {
-				list[row][col] = "*";
+				list[row][col] = '*';
 				col += 2;
 			}
 		}
@@ -39,7 +38,7 @@ public class Diamond2 {
 			int cnt = MAX_ROW - row;					// 4, 3, 2, 1
 			
 			for(int x = 0; x < cnt; x++) {
-				list[row][col] = "*";
+				list[row][col] = '*';
 				col += 2;
 			}
 		}
