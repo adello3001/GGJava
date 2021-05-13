@@ -15,19 +15,31 @@
 3. Static Library
 4. Dynamic Link Library(DLL)
 5. Shared Library(SO)
+<<<<<<< HEAD
 6. RMI(Java Remote Method Invocation) vs COM 
 7. COM(Component Object Model)
 8. DCOM(Distributed Component Object Model)
 
 
+=======
+6. RMI (Java Remote Method Invocation)
+7. COM (Component Object Model)
+8. DCOM (Distributed Component Object Model)
+
+>>>>>>> 4f543b324a078e53ec73996192f4f791504a3f4d
 (Java)
 interface name {
 	type constant = value;					// 상수필드
 	type method(parameter, ...);			// 추상 메소드
 	
 	// 자바에 특화된 기능
+<<<<<<< HEAD
 	default type method(parameter, ...) { ... }	// 디폴트 메소드
 	static type method(parameter, ...) { ... }	// 정적 메소드
+=======
+	default type method(parameter, ...) { ... }	// 디폴트
+	static type method(parameter, ...) { ... };	// 정적 메소드
+>>>>>>> 4f543b324a078e53ec73996192f4f791504a3f4d
 }
 
 (C++)
