@@ -4,12 +4,27 @@ public class Student {
 	private String name;
 	private int english;
 	private int math;
+	private String sex;
+	private int score;
+
+	public Student(String name, String sex, int score) {
+		this.name = name;
+		this.sex = sex;
+		this.score = score;
+	}
 	
 	public Student(String name, int english, int math) {
-		super();
 		this.name = name;
 		this.english = english;
 		this.math = math;
+	}
+	
+	public String getSex() {
+		return this.sex;
+	}
+	
+	public int getScore() {
+		return this.score;
 	}
 
 	public String getName() {
@@ -35,5 +50,5 @@ public class Student {
 	public void setMath(int math) {
 		this.math = math;
 	}
-	
+
 }

@@ -20,7 +20,6 @@ public class MyFunctionalInterfaceExampleX {
 	
 	static void step2() {
 		MyFunctionalInterfaceX myfunc = x -> System.out.println("MyFunctionalInterfaceX: x=" + x);
-		
 		myfunc.method(99);
-	}
+	}	
 }

@@ -49,5 +49,4 @@ public class MyFunctionalInterfaceExample {
 			System.out.println("static MyFunctionalInterface¿« Inner Class");
 		}
 	}
-
 }

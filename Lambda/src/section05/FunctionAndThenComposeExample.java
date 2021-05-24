@@ -20,10 +20,10 @@ public class FunctionAndThenComposeExample {
 
 		functionAB = functionA.andThen(functionB);
 		city = functionAB.apply(new Member("홍길동", "HGD", new Address("조선", "한양")));
-		System.out.println("거주도시: " + city);
+		System.out.println("거주도시:" + city);
 		
 		functionAB = functionB.compose(functionA);
 		city = functionAB.apply(new Member("홍길동", "HGD", new Address("조선", "한양")));
-		System.out.println("거주도시: " + city);
+		System.out.println("거주도시:" + city);
 	}
 }

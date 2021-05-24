@@ -1,6 +1,9 @@
 /*
  * [표준 API의 함수적 인터페이스]
  * Consumer 함수적 인터페이스
+ * public interface Consumer<T> {
+ *   void accept(T t);
+ * }
  */
 package section05;
 
@@ -29,4 +32,5 @@ public class ConsumerExample {
 		
 		consumer.accept("Java");
 	}
+
 }

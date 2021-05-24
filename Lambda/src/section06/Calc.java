@@ -3,7 +3,7 @@ package section06;
 public class Calc {
 	public static final int staticVal = 99;
 	
-	public static int staticMethod(int x, int y) { // 정적메소드
+	public static int staticMethod(int x, int y) { // 정적 메소드
 		return x + y;
 	}
 	

@@ -1,6 +1,6 @@
 /*
  * Function의 순차적 연결
- * -Function<>.andThen() 처리를 시뮬레이션
+ * - Function<>.andThen() 처리를 시뮬레이션
  */
 package section05;
 
@@ -13,9 +13,9 @@ public class FunctionAndThenComposeExample2 {
 		Function<Address, String> functionB;
 		Function<Member, String> functionAB;
 		String city;
-
+		
 		functionA = (Member member) -> {
-			System.out.printf("FunctionA:(%s)(%s)\n",
+			System.out.printf("FunctionA:(%s)(%s)\n", 
 					member.getAddress().getCountry(),
 					member.getAddress().getCity());
 			return member.getAddress();
@@ -25,10 +25,11 @@ public class FunctionAndThenComposeExample2 {
 		Address address = functionA.apply(member);
 		
 		functionB = (Address addr) -> {
-			System.out.printf("FunctionB:(%s)(%s)\n", address.getCountry(), address.getCity());
-			return address.getCity() + "[시]";
+			System.out.printf("FunctionB:(%s)(%s)\n", addr.getCountry(), addr.getCity());
+			return addr.getCity() + "[시]";
 		};
 		
 		functionB.apply(address);
 	}
+
 }

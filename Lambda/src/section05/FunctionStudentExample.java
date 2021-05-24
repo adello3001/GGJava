@@ -19,21 +19,21 @@ public class FunctionStudentExample {
 	}
 	
 	public static void printInt(ToIntFunction<Student> function) {
-		for(Student student : list) {
+		for(Student student : list ) {
 			System.out.println(function.applyAsInt(student));
 		}
 	}
-
+	
 	public static void main(String[] args) {
 		// studentName();
 		// studentScore();
 		
 		System.out.println("[학생 이름]");
 		printString(t -> t.getName());
-		
+
 		System.out.println("[영어 점수]");
 		printInt(t -> t.getEnglish());
-		
+
 		System.out.println("[수학 점수]");
 		printInt(t -> t.getMath());
 	}
@@ -45,10 +45,10 @@ public class FunctionStudentExample {
 		*/
 		
 		System.out.println("[학생 이름]");
-		Function<Student, String> function = (t) -> {
+		Function<Student, String> function = (t) -> { 
 			return t.getName();
 		};
-	
+		
 		// printString(Function<Student, String> function)
 		for(Student student : list) {
 			System.out.println(function.apply(student));
@@ -59,13 +59,13 @@ public class FunctionStudentExample {
 	public static void studentScore() {
 		System.out.println("[영어 점수]");
 		ToIntFunction<Student> english = t -> t.getEnglish();
-		for(Student student : list) {
+		for(Student student : list ) {
 			System.out.println(english.applyAsInt(student));
 		}
-		
+
 		System.out.println("[수학 점수]");
 		ToIntFunction<Student> math = t -> t.getMath();
-		for(Student student : list) {
+		for(Student student : list ) {
 			System.out.println(math.applyAsInt(student));
 		}
 	}

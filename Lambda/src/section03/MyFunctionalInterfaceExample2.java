@@ -4,7 +4,7 @@
 package section03;
 
 public class MyFunctionalInterfaceExample2 {
-	
+
 	public static void main(String[] args) {
 		normal();
 		lambda();
