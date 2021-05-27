@@ -1,7 +1,7 @@
 /*
- * FXML Layout
+ * 툴바 컨트롤
  */
-package section03.s03;
+package section08.s02;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class FxmlLayout extends Application {
+public class ToolbarControls extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
@@ -20,7 +20,7 @@ public class FxmlLayout extends Application {
 		Parent root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		Scene scene = new Scene(root);
 		
-		primaryStage.setTitle("FXML Layout");
+		primaryStage.setTitle("Toolbar Controls Demo");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

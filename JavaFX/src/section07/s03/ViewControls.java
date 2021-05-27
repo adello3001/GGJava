@@ -1,7 +1,10 @@
 /*
- * FXML Layout
+ * ºä ÄÁÆ®·Ñ
+ * - ListView
+ * - TableView
+ * - ImageView
  */
-package section03.s03;
+package section07.s03;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +12,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class FxmlLayout extends Application {
+
+public class ViewControls extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
@@ -20,7 +24,7 @@ public class FxmlLayout extends Application {
 		Parent root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		Scene scene = new Scene(root);
 		
-		primaryStage.setTitle("FXML Layout");
+		primaryStage.setTitle("View Controls Demo");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

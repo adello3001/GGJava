@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.Double?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" prefHeight="200.0" prefWidth="300.0">
+	<top>
+		<ToolBar>
+			<items>
+				<Button text="New"/>
+				<Button text="Edit"/>
+			</items>
+		</ToolBar>
+	</top>
+	
+	<center>
+		<TextArea/>
+	</center>
+	
+	<bottom>
+		<BorderPane>
+			<center>
+				<TextField/> 
+			</center>
+			<right>
+				<Button text="적용"/>
+			</right>
+		</BorderPane>
+	</bottom>
+</BorderPane>

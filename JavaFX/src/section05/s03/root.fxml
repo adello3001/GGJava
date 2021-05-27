@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="section05.s03.RootController"
+	prefHeight="50.0" prefWidth="200.0"
+	alignment="CENTER" spacing="20.0">
+	
+	<children>
+		<Button fx:id="btnOk" text="Ok" onAction="#handleBtnOk"/>
+		<Button fx:id="btnCancel" text="Cancel" onAction="#handleBtnCancel"/>
+		<Button fx:id="btnExit" text="Exit" onAction="#handleBtnExit"/>
+	</children>
+</HBox>	
