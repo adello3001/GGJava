@@ -21,7 +21,7 @@ public class ViewControls extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("root.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("section07.s03.root.fxml"));
 		Scene scene = new Scene(root);
 		
 		primaryStage.setTitle("View Controls Demo");
