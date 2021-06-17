@@ -1,0 +1,19 @@
+/* CSS ÆÄÀÏ */
+
+Label {
+	-fx-padding: 20;
+}
+
+Button {
+	-fx-padding: 20;
+}
+
+#labelId {
+	-fx-background-color: black;
+	-fx-text-fill: yellow;
+}
+
+.labelClass {
+	-fx-background-color: blue;
+	-fx-text-fill: white;
+}
