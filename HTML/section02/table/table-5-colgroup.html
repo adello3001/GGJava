@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td {
+            border:1px solid #ccc;
+        }
+        td {
+            padding: 5px;
+        }
+    </style>      
+    <title>Table colgroup Tag</title>
+</head>
+<body>
+    <h3>Table colgroup 태그</h3>
+    <hr>
+    <p>테이블 컬럼 그룹 태그는 표에서 하나의 열에 스타일을 지정하거나
+        열을 묶어서 스타일을 한 번에 지정할 수 있다.
+    </p>
+    <hr>
+    <table>
+        <colgroup>
+            <col span="2" style="background-color:red;">
+            <col>
+            <col style="background-color:blue;">
+        </colgroup>        
+        <caption>테이블 컬럼 그룹</caption>
+        <tr>
+            <td>컬럼1</td>
+            <td>컬럼2</td>
+            <td>컬럼3</td>
+            <td>컬럼4</td>
+        </tr>
+        <tr>
+            <td>컬럼5</td>
+            <td>컬럼6</td>
+            <td>컬럼7</td>
+            <td>컬럼8</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
