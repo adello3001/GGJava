@@ -1,0 +1,31 @@
+/* CSS ÆÄÀÏ */
+
+#vbox1 {
+	-fx-background-color: rgba(125,125,125,1);
+}
+
+#vbox2 {
+	-fx-background-color: linear-gradient(to right, #000000, #ffffff);
+}
+
+#vbox3 {
+	-fx-background-color: radial-gradient(center 50% 25%, radius 100%, #ff0000, #ffffff);
+}
+
+#vbox4 {
+	-fx-border-color: skyblue;
+	-fx-background-image: url("images/icon.gif");
+}
+
+#vbox5 {
+	-fx-border-color: skyblue;
+	-fx-background-image: url("images/icon.gif");
+	-fx-background-repear: no-repeat;
+}
+
+#vbox6 {
+	-fx-border-color: skyblue;
+	-fx-background-image: url("images/icon.gif");
+	-fx-background-repear: no-repeat;
+	-fx-background-position: center;
+}

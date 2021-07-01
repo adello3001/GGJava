@@ -1,0 +1,9 @@
+
+-- sal 값이 2000부터 3000 사이의 값을 검색
+SELECT * FROM emp WHERE sal >= 2000 AND sal <= 3000;
+
+-- BETWEEN 최소값 AND 최대값
+SELECT * FROM emp WHERE sal  BETWEEN 2000 AND 3000;
+
+-- NOT BETWEEN 최소값 AND 최대값
+SELECT * FROM emp WHERE sal NOT  BETWEEN 2000 AND 3000;

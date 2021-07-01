@@ -11,18 +11,20 @@ import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
+
 
 public class RootController implements Initializable {
 	@FXML private PieChart pieChart;
 	@FXML private BarChart barChart;
 	@FXML private AreaChart areaChart;
-	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		pieChart.setData(FXCollections.observableArrayList(
-				new PieChart.Data("AWT", 10),
+				new PieChart.Data("AWT", 50),
 				new PieChart.Data("Swing", 10),
 				new PieChart.Data("SWT", 10),
 				new PieChart.Data("JavaFX", 50)));
@@ -45,7 +47,7 @@ public class RootController implements Initializable {
 		
 		barChart.getData().add(series1);
 		barChart.getData().add(series2);
-		
+	
 		XYChart.Series series3 = new XYChart.Series();
 		series3.setName("Æò±Õ¿Âµµ");
 		series3.setData(FXCollections.observableArrayList(
@@ -55,5 +57,6 @@ public class RootController implements Initializable {
 				new XYChart.Data("2018", 20)));
 		
 		areaChart.getData().add(series3);
+		
 	}
 }

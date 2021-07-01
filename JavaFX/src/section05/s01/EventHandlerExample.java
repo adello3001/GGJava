@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class EventHandlerExample extends Application {
 
@@ -23,7 +24,7 @@ public class EventHandlerExample extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		HBox root = new HBox();
-		root.setPrefSize(200, 50);
+		root.setPrefSize(200,50);
 		root.setAlignment(Pos.TOP_CENTER);
 		root.setSpacing(20);
 		
@@ -32,7 +33,7 @@ public class EventHandlerExample extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				System.out.println("[Ok 버튼 클릭]");
-				EventType<?> et = event.getEventType();
+				EventType<?> et = event.getEventType(); 
 				System.out.println("EventType: " + et.getName());
 			}
 		});
@@ -44,9 +45,9 @@ public class EventHandlerExample extends Application {
 		primaryStage.setScene(scene);
 		
 		// primaryStage.setOnCloseRequest(event -> System.out.println("종료"));
-		primaryStage.setOnCloseRequest(event -> {
+		primaryStage.setOnCloseRequest((WindowEvent event) -> {
 			System.out.println("[종료]");
-			EventType<?> et = event.getEventType();
+			EventType<?> et = event.getEventType(); 
 			System.out.println("EventType: " + et.getName());
 		});
 		

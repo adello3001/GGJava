@@ -1,0 +1,39 @@
+-- 테이블(Student)에 열 담당교수이름(문자열 10자리)을 추가한다.
+
+desc student;
+
+-- 테이블의 구조 수정(컬럼을 추가)
+ALTER TABLE student ADD professor VARCHAR2(10);
+
+-- 테이블의 구조 수정(컬럼의 속성을 변경)
+-- 테이블(Student)에 추가한 열(담당교수이름)의 문자열 크기를 20자리로 변경한다.
+ALTER TABLE student MODIFY professor VARCHAR2(20);
+
+/*
+2. 문제1의 테이블(Student)의 데이터를 아래와 같은 순서로 처리하는 SQL문을 작성한다.
+   1) 테이블(Student)에 새로운 학생 정보를 추가한다.
+   2) 테이블(Student)에 한 학생을 선택하여 데이터를 수정한다.
+   3) 테이블(Student)에 한 학생을 선택하여 데이터를 삭제한다.
+   4) 위 문제 2)에서 학생정보를 수정한 부분부터 취소 처리한다.
+*/
+
+-- 새로운 트랜잭션 시작
+INSERT INTO student VALUES('1000', '우등생', '항공학과', '010-1234-9087', '12345', '김포', '김항공');
+
+-- 세이브 포인터(sp)
+SAVEPOINT sp;
+
+UPDATE student SET sname = '박하늘' WHERE sno = '1000';
+SELECT * from student;
+DELETE FROM student WHERE sno = '1000';
+ROLLBACK TO sp; -- 지정된 세이브 포인터로 이동
+COMMIT; -- 커밋이 되면 새로운 트랜잭션이 시작
+
+-- 새로운 트랜잭션 시작
+-- TR2
+INSERT INTO student VALUES('2000', '이등생', '항공학과', '010-2000-2020', '2134', '김포', '김항공');
+UPDATE student SET sname = '이상' WHERE sno = '2000';
+SELECT * from student;
+DELETE FROM student WHERE sno = '2000';
+ROLLBACK; -- TR2
+COMMIT;

@@ -1,5 +1,5 @@
 /*
- * 툴바 컨트롤
+ * 메뉴 컨트롤
  */
 package section08.s02;
 
@@ -20,7 +20,7 @@ public class ToolbarControls extends Application {
 		Parent root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		Scene scene = new Scene(root);
 		
-		primaryStage.setTitle("Toolbar Controls Demo");
+		primaryStage.setTitle("Menu Controls Demo");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

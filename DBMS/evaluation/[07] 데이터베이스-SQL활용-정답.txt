@@ -1,0 +1,92 @@
+[07] 데이터베이스-SQL활용
+
+
+(추가조치내용)
+1. 데이터베이스 설치와 운영에 관련된 자료를 통하여 설명
+2. 테이블 스페이스 생성 및 권한 설정에 대한 실습을 통하여 설명
+3. 테이브 생성 및 쿼리에 대힌 실습을 통하여 설명
+
+(피드백)
+1. 부족한 부분을 수업에서 학습한 내용을 통해 확인해 보도록 제안
+2. SQL 쿼리에 대해 이론과 실습을 병행하도록 제안
+
+----------------------------------------------------------------------------------  
+[문제1]
+1. Oracle Database에서 테이블 Student(학번, 이름, 학과, 전화번호, 우편번호, 주소)이 있다.
+   - 테이블(Student)에 열 담당교수이름(문자열 10자리)을 추가한다.
+   - 테이블(Student)에 추가한 열(담당교수이름)의 문자열 크기를 20자리로 변경한다.
+   
+<채점기준>
+- 테이블(Student)에 열 담당교수이름(문자열 10자리)을 추가한다.(총 50점)
+  (정확도에 따른 5단계 배점, 각 단계별 10점, 총 50점)
+- 테이블(Student)에 추가한 열(담당교수이름) 문자열 크기를 20자리로 변경한다.(총 50점)
+  (정확도에 따른 5단계 배점, 각 단계별 10점, 총 50점)   
+  
+
+  
+ALTER TABLE student ADD professor VARCHAR2(10);
+ALTER TABLE student MODIFY professor VARCHAR2(20);
+  
+----------------------------------------------------------------------------------  
+[문제2]  
+2. 문제1의 테이블(Student)의 데이터를 아래와 같은 순서로 처리하는 SQL문을 작성한다.
+   1) 테이블(Student)에 새로운 학생 정보를 추가한다.
+   2) 테이블(Student)에 한 학생을 선택하여 데이터를 수정한다.
+   3) 테이블(Student)에 한 학생을 선택하여 데이터를 삭제한다.
+   4) 위 문제 2)에서 학생정보를 수정한 부분부터 취소 처리한다.  
+   
+   INSERT INTO student VALUES (...);
+   SAVEPOINT sp;
+   UPDATE student SET ...   WHERE ...;
+   DELETE FROM student WHERE ...;
+   ROLLBACK TO sp;
+   COMMIT;
+   
+<채점기준>
+- 테이블(Student)에 새로운 학생 정보를 추가한다.(정확도에 따른 4단계 배점, 각 단계별 3점, 총12점)
+- 테이블(Student)에 한 학생을 선택하여 데이터를 수정한다.(정확도에 따른 4단계 배점, 각 단계별 3점, 총13점)
+- 테이블(Student)에 한 학생을 선택하여 데이터를 삭제한다.(정확도에 따른 4단계 배점, 각 단계별 3점, 총12점)
+- 위 학생정보를 수정한 부분부터 취소 처리한다.(정확도에 따른 4단계 배점, 각 단계별 3점, 총13점)   
+
+INSERT INTO student VALUES('1000', '우등생', '항공학과', '010-1234-9087', '12345', '김포', '김항공');
+
+SAVEPOINT sp;
+
+UPDATE student SET sname = '박하늘' WHERE sno = '1000';
+SELECT * from student;
+DELETE FROM student WHERE sno = '1000';
+ROLLBACK TO sp;
+
+
+----------------------------------------------------------------------------------  
+[문제3]
+3. 아래 두 개의 테이블 학생(Student), 교수(Profession)을 만들고 SQL문을 기술한다.
+   - Student(학번, 이름, 학과, 전화번호, 우편번호, 주소, 담당교수)
+   - Profession(교수코드, 교수이름, 학과)
+   - Student와 Profession은 제약조건으로 참조키로 연결한다.
+   - Student과 Profession은 조인하여 학생정보와 담당교수 정보를 출력한다.
+   
+<채점기준>   
+- Student(학번, 이름, 학과, 전화번호, 우편번호, 주소, 담당교수)
+  (정확도에 따른 5단계 배점, 각 단계별 2점, 총10점)
+- Profession(교수코드, 교수이름, 학과)
+  (정확도에 따른 5단계 배점, 각 단계별 2점, 총10점)
+- Student와 Profession은 제약조건으로 참조키로 연결한다.
+  (정확도에 따른 5단계 배점, 각 단계별 3점, 총15점)
+- Student과 Profession은 조인하여 학생정보와 담당교수 정보를 출력한다.
+  (정확도에 따른 5단계 배점, 각 단계별 3점, 총15점)   
+
+CREATE TABLE Profession (
+	professor VARCHAR(5) CONSTRAINT professsion_pk PRIMARY KEY,
+	proname VARCHAR2(20),
+	subject VARCHAR2(20)
+	
+);  
+CREATE TABLE student (
+	Professor VARCHAR2(5) REFERENCES Profession(Professor);
+);
+
+SELECT s.sno, s.name, p.professor, p.proname 
+FROM student s, profession p
+WHERE s.professor = p.professor;
+

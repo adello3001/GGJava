@@ -1,0 +1,277 @@
+
+(추가조치내용)
+1. 데이터베이스 설치와 운영에 관련된 자료를 통하여 설명
+2. 테이블 스페이스 생성 및 권한 설정에 대한 실습을 통하여 설명
+3. 테이브 생성 및 쿼리에 대힌 실습을 통하여 설명
+
+(피드백)
+1. 부족한 부분을 수업에서 학습한 내용을 통해 확인해 보도록 제안
+2. SQL 쿼리에 대해 이론과 실습을 병행하도록 제안
+
+
+
+[문제1]
+1. Windows 운영체제에서 Oracle Database를 설치할 때 다음과 같은 각 설치 단계에서 지정하는 설치 옵션을 설명한다.
+   - 1단계: 보안 갱신 구성
+   - 2단계: 설치 옵션
+   - 3단계: 데이터베이스 설치 옵션
+   - 4단계: 설치 유형
+   - 5단계: Oracle 홈 사용자
+   - 6단계: 필요 조건 검사
+   - 7단계: 요약
+   - 8단계: 제품 설치
+   - 9단계: 완료
+   
+<채점기준>   
+- 설치 단계별 각 옵션의 항목 설명의 정확성에 따른 배점: 9단계 * 10점 = 총 90점
+- 전체 설명의 일관성에 따른 배점 10점   
+
+
+1단계: 보안 갱신 구성
+	-> 보안 문제에 대한 알림을 수신할 전자 메일 주소를 제공하고,
+		제품을 설치한 후 Configuration Manager를 시작하십시오.
+	-> 전자메일
+	-> My Oracle Support를 통해 보안 갱신 수신
+	
+2단계: 설치 옵션
+	-> 데이터베이스 생성 및 구성
+	-> 데이터베이스 소프트웨어만 설치
+	-> 기존 데이터베이스 업그레이드
+	
+	-> 설치 위치
+	-> 데이터베이스 파일 위치
+	-> 데이터베이스 버전
+	-> 문자 집합: 유니코드(AL32UTF)
+	-> 전역 데이터베이스 이름
+	-> 비밀번호	
+	
+3단계: 데이터베이스 설치 옵션
+	-> 데스크톱 클래스
+		: 렙톱이나 데스크톱 클래스 시스템에 설치하는 경우 이 옵션을 선택하십시오.
+			이 옵션은 시작 데이터베이스를 포함하고 최소 구성을 허용합니다.
+	-> 서버 클래스
+		: Oracle이 운용 데이터 센터에 사용되는 시스템으로 정의하는 서버 클래스
+			시스템에 설치하는 경우 이 옵션을 선택하십시오.
+			이 옵션을 사용하면 더 많은 고급 구성 옵션을 사용할 수 있습니다.
+	
+4단계: 설치 유형
+	-> 단일 인스턴스 데이터베이스로 설치 : 
+		단일 인스턴스 데이터베이스는 쉽게 하나의 메모리에 하나의 DB가 있는 구조입니다. 
+    -> Real Application Clusters 설치 : 
+		RAC라고 부르는데 위키백과에 의하면 오라클 RAC을 사용하면 여러 대의 컴퓨터가 
+        동시에 한 대의 DBMS 서버에 접속하여 데이터를 이용할 수 있다고 명시되어 있습니다. 
+		여러 메모리에 하나의 저장공간이 묶여있는 구조입니다. 
+	-> 표준설치
+	-> 고급설치
+	
+	
+5단계: Oracle 홈 사용자
+	-> 보안 향상을 위해 관리자가 아닌 계정으로 이 Oracle 홈에서 Windows 서비스를 실행하도록 선택할 수 있습니다.
+		Oracle은 이러한 용도를 위해 가상 계정을 선택하거나 표준 Windows 사용자 계정을 지정할 것을 권장합니다.
+	-> 가상 계정 사용
+	-> 기존 Windows 사용자 사용
+	-> 새 Windows 사용자 생성
+	-> Windows 내장 계정 사용
+	
+6단계: 필요 조건 검사
+	-> 대상 환경이 선택한 제품에 대한 최소 설치 및 구성 요구 사항을 충족하는지 확인하는 중입니다.
+		이 작업에 시간이 걸릴 수 있습니다.
+	-> 검사 후 오류가 날 수도 있다.
+		: <모두 무시> 버튼을 체크 후 다음 버튼 클릭한다.
+		
+7단계: 요약
+	-> 설치 정보 요약
+	-> 전역 설정
+	-> 데이터베이스 정보
+	
+8단계: 제품 설치
+	-> 설치 중
+	-> 기다림
+	
+9단계: 완료
+
+-------------------------------------------------------------------------------------------------------
+2. Windows 운영체제에 설치된 Oracle Database에 다음과 같은 3단계의 작업을 위한 SQL 스크립트를 작성한다.
+   - 테이블 스페이스 생성
+   - 사용자 계정 생성
+   - 사용자 계정에 접속 권한 및 테이블 생성 권한을 부여
+   
+<채점기준>   
+- 테이블 스페이스 생성(정확도에 따른 5단계 배점, 각 단계별 5점, 총 25점)
+	CREATE TABLESPACE SOLDB 
+		DATAFILE 'SOLDB.DBF' 
+		SIZE 80M 
+		AUTOEXTEND ON NEXT 8M MAXSIZE UNLIMITED;
+		
+CREATE TABLESPACE SOLDB 
+    DATAFILE 
+        'SOLDB.DBF/SOLDB' 
+		SIZE 10485760 
+		AUTOEXTEND ON NEXT 10485760 MAXSIZE UNLIMITED;		
+		
+CREATE TABLESPACE SOLDB 
+    DATAFILE 
+        'C:\DBMS\Oracle11g\app\oracle\oradata\XE\SOLDB.DBF' 
+		SIZE 10485760 AUTOEXTEND ON NEXT 10485760 MAXSIZE UNLIMITED;
+		
+
+- 사용자 계정 생성(정확도에 따른 4단계 배점, 각 단계별 3점, 총12점)
+	CREATE USER scott IDENTIFIED BY tiger;
+	-- USER SQL
+	CREATE USER "SOLUSER" IDENTIFIED BY "SOLUSER"  
+	DEFAULT TABLESPACE "SOLDB"
+	TEMPORARY TABLESPACE "TEMP";
+	
+	-- USER SQL
+	CREATE USER "SOLUSER" IDENTIFIED BY "SOLUSER"  
+		DEFAULT TABLESPACE "SOLDB"
+		TEMPORARY TABLESPACE "TEMP";
+
+- 사용자 계정에 접속 권한 및 테이블 생성 권한을 부여(정확도에 따른 4단계 배점, 각 단계별 3점, 총13점)   
+	GRANT CONNECT, RESOURCE TO scott;
+	GRANT "CONNECT" TO "SOLUSER" ;
+	GRANT "RESOURCE" TO "SOLUSER" ;
+
+	-- 사용자 삭제
+	DROP USER "SOLUSER" CASCADE;
+	
+	-- USER SQL
+	CREATE USER "SOLUSER" IDENTIFIED BY "SOLUSER"  
+		DEFAULT TABLESPACE "SOLDB"
+		TEMPORARY TABLESPACE "TEMP";
+
+	-- QUOTAS
+	ALTER USER "SOLUSER" QUOTA UNLIMITED ON "SOLDB";
+
+	-- ROLES
+	GRANT "DBA" TO "SOLUSER" ;
+	GRANT "CONNECT" TO "SOLUSER" ;
+	GRANT "RESOURCE" TO "SOLUSER" ;
+
+	-- SYSTEM PRIVILEGES
+
+	-- 테이블 스페이스 생성
+	CREATE TABLESPACE TESTDB 
+	  DATAFILE 'TESTDB.DBF' 
+	  SIZE 10M AUTOEXTEND ON NEXT 1M MAXSIZE UNLIMITED;
+
+	-- 사용자 계정 생성
+	CREATE USER "TESTUSER" IDENTIFIED BY "TESTPASS";
+
+	-- 사용자 계정에 접속 권한 및 테이블 생성 권한을 부여
+	GRANT CONNECT, RESOURCE TO TESTUSER;
+
+	
+-------------------------------------------------------------------------------------------------------
+3. Oracle Database에 다음과 같은 3단계의 작업을 위한 SQL 스크립트를 작성한다.
+   - 테이블 Student를 생성한다. (학번, 이름, 학과, 전화번호, 우편번호, 주소)
+   - 테이블 Student에서 전화번호를 키로 하는 인덱스를 생성한다.
+   - 테이블 Student에서 학과별로 학생수를 집계하는 SELECT문 작성한다.
+   - 테이블 Student에서 학과별로 학생수를 집계하는 VIEW를 생성한다.
+   
+<채점기준>   
+- 테이블 Student를 생성한다.(정확도에 따른 4단계 배점, 각 단계별 3점, 총12점)
+- 테이블 Student에서 전화번호를 키로 하는 인덱스를 생성한다. (정확도에 따른 4단계 배점, 각 단계별 3점, 총13점)
+- 테이블 Student에서 학과별로 학생수를 집계하는 SELECT문자 작성한다. 
+  (정확도에 따른 4단계 배점, 각 단계별 3점, 총12점)
+
+CREATE TABLE student (
+);
+
+CREATE INDEX student_index ON student(전화번호);
+  
+SELECT 학과, count(*) FROM student GROUP BY 학과;
+  
+- 테이블 Student에서 학과별로 학생수를 집계하는 VIEW를 생성한다. (정확도에 따른 4단계 배점, 각 단계별 3점, 총13점)   
+	CREATE VIEW view_student
+	AS (SELECT 학과, count(*) FROM student GROUP BY 학과);
+	
+CREATE TABLE HELLO 
+(
+  ID VARCHAR2(10) NOT NULL,
+  NAME VARCHAR2(20) NOT NULL,
+  TEL VARCHAR2(20),
+  CONSTRAINT HELLO_PK PRIMARY KEY(ID)
+  ENABLE 
+);
+
+CREATE TABLE DEPT
+(
+	DEPTNO NUMBER(2) CONSTRAINT PK_DEPT PRIMARY KEY,
+	DNAME VARCHAR2(14) ,
+	LOC VARCHAR2(13) 
+) ;
+
+CREATE TABLE EMP
+(EMPNO NUMBER(4) CONSTRAINT PK_EMP PRIMARY KEY,
+	ENAME VARCHAR2(10),
+	JOB VARCHAR2(9),
+	MGR NUMBER(4),
+	HIREDATE DATE,
+	SAL NUMBER(7,2),
+	COMM NUMBER(7,2),
+	DEPTNO NUMBER(2) CONSTRAINT FK_DEPTNO REFERENCES DEPT
+);
+
+
+-- regions
+CREATE TABLE regions
+(
+    region_id NUMBER GENERATED BY DEFAULT AS IDENTITY
+    START WITH 5 PRIMARY KEY,
+    region_name VARCHAR2( 50 ) NOT NULL
+);
+  
+CREATE TABLE countries
+(
+    country_id   CHAR( 2 ) PRIMARY KEY  ,
+    country_name VARCHAR2( 40 ) NOT NULL,
+    region_id    NUMBER                 , -- fk
+    CONSTRAINT fk_countries_regions FOREIGN KEY( region_id )
+      REFERENCES regions( region_id ) 
+      ON DELETE CASCADE
+);
+
+
+------------------------------------------------------------------------------------
+ - 1단계: 보안 갱신 구성
+     ? 보안문서에 대한 알람을 수신할 전자메일 혹은 오라클 서비스 보안갱신 수신 비밀번호를 설정한다.  
+
+   - 2단계: 설치 옵션
+     ? 데이터베이스 생성 및 구성 : 새로운 데이터 베이스를 생성하고 구성하려 할 때 선택한다. 
+     ? 데이터베이스 소프트웨어만 설치 : 데이터베이스를 구축하지 않고 프로그램 만 설치할 때 선택한다. 
+     ? 기존 데이터 베이스 업그레이드 : 기존 데이터베이스를 업그레이드 할 때 선택한다. 
+
+   - 3단계: 데이터베이스 설치 옵션
+     ? 데스크톱 클래스： 노트북이나 데스크톱 컴퓨터에 설치할 때 선택한다. 최소구성으로 데이터베이스를 설치한다. 
+     ? 서버클레스 : 오라클 운용 데이터센터에 사용하는 서버에 설치하는 경우 설정한다. 고급옵션을 설정할수 있다. 
+
+   - 4단계: 설치 유형
+     ? 단일 인스턴스 데이터베이스로 설치 : 단일 인스턴스 데이터베이스는 쉽게 하나의 메모리에 하나의 DB가 있는 
+　　　　구조입니다. 
+     ? Real Application Clusters 설치 : RAC라고 부르는데 위키백과에 의하면 오라클 RAC을 사용하면 여러 대의 컴퓨터가 
+        동시에 한 대의 DBMS 서버에 접속하여 데이터를 이용할 수 있다고 명시되어 있습니다. 여러 메모리에 하나의 저장공          간이 묶여있는 구조입니다. 
+
+   - 5단계: Oracle 홈 사용자
+     ? 가상계정사용：가상계정으로 사용자를 설정한다. 
+     ? 기존 윈도우 사용자 : 기존 윈도우 계정으로 사용자를 설정한다. 
+     ? 새 윈도우 사용자 : 새 윈도우  계정으로 사용자를 설정한다. 
+     ? 윈도우 내장 계정 사용 : 윈도우에 내장되어 있는  계정으로 사용자를 설정한다. 
+
+   - 6단계: 필요 조건 검사
+     ? 설치구성을 설정하는 단계입니다. 오라클 데이터베이스를 어디에다 설치할 것이고 데이터베이스 파일은 어디에     
+        저장할것인지 선택합니다. 
+
+
+   - 7단계: 요약
+     ? 선택한 설치 옵션을 확인하는 단계입니다.  설치버튼을 누르면 설치가 진행됩니다.
+	 
+	 
+- 8단계: 제품 설치
+     ? 제품이 설치가 되며 진행률과 오라클 데이터베이스 설치→준비→파일복사→설정을 진행하고 데이터베이스 기본설정
+        하고 데이터베이스 구성 순으로 설치가 진행됩니다. 
+   
+ - 9단계: 완료
+     ? 설치가 완료되었으면 제데로 설치가 되었는지 확인해야겠죠? 윈도우+R키를 눌러서 실행창에 cmd를 입력하고 명령
+        프롬프트 창을 열어줍니다. 여기서 sqlplus를 입력하게되면 sqlplus에 접속하게 되고 사용자명을 입력하게 됩니다.          사용장명 system, 비밀번호는 아까 설치단계에서 입력했던 비밀번호를 입력하고 엔터를 누르면 해당 sysem계정으로          로그인하게 됩니다. 	 
+	 
