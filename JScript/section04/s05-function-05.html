@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Function</title>
     <style>
-        * { margin:0; padding:0; }
-        #gallery { text-align:center; }
-        #gallery input[type="image"] { margin:0 8px;}
+        * { margin:0; padding:0;}
+        #gallery { text-align:center;}
+        #gallery input[type="image"] { margin:0 8px; }
     </style>
     <script>
         var num = 1;
         var maxphoto = 5;
         function gallery(direct) {
             if(direct) { // 다음버튼(1)
-                if(num >= 5) {
+                if(num >= maxphoto) {
                     return;
                 }
                 num++;

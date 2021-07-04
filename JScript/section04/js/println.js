@@ -1,5 +1,5 @@
 /*
-// print(title, value)
+// println(title, value)
 */
 function println(title, value) {
     document.write(title, value, '<br>');

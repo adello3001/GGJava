@@ -7,7 +7,7 @@
     <title>JavaScript Function</title>
     <script src="js/println.js"></script>
     <script>
-        var colors = ['white', 'red', 'blue', 'purple'];
+        var colors = ['white', 'red',' blue', 'purple'];
 
         for(var cnt=0; cnt < colors.length; cnt++) {
             println('color[' + cnt + '] : ', colors[cnt]);
@@ -17,7 +17,7 @@
         function changeColor() {
             cnt++;
             if(cnt >= colors.length) {
-                cnt = 0;
+                cnt=0;
             }
 
             var bodyTag = document.getElementById("colorBody");

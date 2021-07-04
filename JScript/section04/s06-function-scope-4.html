@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Function Scope</title>
     <script src="js/println.js"></script>
-    <script src="js/global.js"></script>
+    <script src='js/global.js'></script>
 </head>
 <body>
-    <h1>함수 스코드</h1>
+    <h1>함수 스코프</h1>
     <hr>
     <script>
         (function() {
             var global_hello = "local hello";
-            
+
             function hello() {
-                global_hello += ', welcome!!!';
-                printlist('[hello]: ',  global_hello);
+                global_hello += ', welcom!!!';
+                printlist('[hello]: ', global_hello);
             }
 
             hello();
         })();
 
-        printlist('[global]: ',  global_hello);
+       printlist('[global]: ', global_hello);
+
     </script>
+    
 </body>
 </html>
