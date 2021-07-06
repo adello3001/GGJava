@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Interval</title>
+    <script>
+        /*
+        // setInterval()   : 일정 시간 간격으로 반복 실행 지정
+        // 백그라운드로 실행되는 것이 아니다.
+        // 시간 간격으로 포그라운드(메인 스레스)
+        // clearInterval() : setInterval()을 취소
+        // var 인터벌변수 = setInterval(...)
+        // clearInterval(인터벌변수)
+        */
+        var sum = 0;
+        var suminterval = setInterval(function() { // 2.5초(2500ms) 간격으로 실행
+            for(var cnt=1; cnt<=10; cnt++) {
+                sum += cnt;
+            }
+            console.log("sum=", sum, '<br>');
+        }, 2500);
+    </script>
+</head>
+<body>
+    <h2>인터벌(interval) 테스트</h2>
+    <button onclick="clearInterval(suminterval)">작업중지</button>
+    
+</body>
+</html>
