@@ -1,0 +1,2 @@
+document.querySelector("#product-img > #sample").getAttribute("src")
+document.querySelector("#product-img > img").setAttribute("src", "images/sample-2.jpg")

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Siblings</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#list-4").siblings().css("background", "#ccc");
+        });
+    </script>
+</head>
+<body>
+    <h1>형제 선택자</h1>
+    <p>자신을 제외한 인접한 전체 형제들을 선택한다.</p>
+    <hr>
+    <ul id="wrap">
+        <li>목록1</li>
+            <ul>
+                <li>세부항목1</li>
+                <li>세부항목2</li>
+                <li>세부항목3</li>
+                <li id="list-4">세부항목4</li>
+                <li>세부항목5</li>
+                <li>세부항목6</li>
+                <li>세부항목7</li>
+            </ul>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Hello</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $("#hello").css("color", "blue");
+    </script>
+</head>
+<body>
+    <p>헤더가 먼저 실행이 되고 바디가 나중에 실행이 되어
+        바디 영역의 태그가 생성되기 전이므로
+        헤더 영역에 있는 스크립트에서 id(#hello)를 찾지 못한다.
+    </p>
+    <hr>
+    <h1 id="hello">제이쿼리의 세계에 오신 것을 환영합니다.</h1>
+</body>
+</html>

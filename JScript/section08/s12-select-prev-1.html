@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Prev</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#list-2").prev().css("background", "#ccc");
+        });
+    </script>
+</head>
+<body>
+    <h1>이전 선택자</h1>
+    <hr>
+    <ul id="wrap">
+        <li>목록1</li>
+            <ul>
+                <li>세부항목1</li>
+                <li id="list-2">세부항목2</li>
+                <li>세부항목3</li>
+            </ul>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ul>
+    
+</body>
+</html>

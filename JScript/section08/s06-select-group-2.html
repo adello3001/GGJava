@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Group</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("h3, #desc, .remark").css("color", "blue").css("background", "#ccc");
+        });
+    </script>
+</head>
+<body>
+    <h1>그룹 선택자</h1>
+    <hr>
+    <h2>그룹 선택자 예제</h2>
+    <h3>h2 태그와 id(desc)인 모든 태그를 선택한다.</h3>
+    <hr>
+    <p id="desc">제이쿼리는 스타일을 동적으로 처리하는데 편리합니다.</p>
+    <p class="remark">이 내용을 클래스(remark) 스타일이 적용되었습니다.</p>
+</body>
+</html>

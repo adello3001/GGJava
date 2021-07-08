@@ -1,0 +1,9 @@
+[JQuery]
+모질라사의 자바스크립트 개발자 존레식(John Resig)이
+자바스크립트를 이용해 만든 라이브러리 언어
+
+(사이트)
+https://cdnjs.com/libraries/jquery
+
+version : jquery 1.12.4
+filename : js/jquery.js

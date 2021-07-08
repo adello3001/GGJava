@@ -1,8 +1,8 @@
 /*
 // 더하기 함수: add(a, b)
 */
-function add(a, b) {
-    return a + b;
+function add(x, y) {
+    return x + y;
 }
 
 function print(title, value) {

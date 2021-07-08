@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Attribute</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#wrap a[target]").css({"color":"#f00"});           /* 속성의 존재 */
+            $("#wrap a[href^=https]").css({"color":"#0f0"});      /* 특정한 문자열로 시작 */
+            $("#wrap a[href$=net]").css({"color":"#0ff"});        /* 특정한 문자열로 종료 */
+            $("#wrap a[href*=developer]").css({"color":"#a0b0c1"});  /* 특정한 문자열을 포함 */
+        });
+    </script>
+</head>
+<body>
+    <h1>속성 탐색 선택자</h1>
+    <p>특정한 요소의 속성의 포함 여부에 따라 선택</p>
+    <ul>
+        <li>속성이 존재하는가?</li>
+        <li>속성에 값이 일치한는가?</li>
+        <li>속성의 값이 특정한 문자열로 시작하는가?</li>
+        <li>속성의 값이 특정한 문자열로 끝나는가?</li>
+        <li>속성의 값이 특정한 문자열을 포함하고 있는가?</li>
+    </ul>
+    <hr>
+    <div id="wrap">
+        <p><a href="http://ezen.com" target="_blank">이젠아카데미</a></p>
+        <p><a href="https://naver.com">네이버</a></p>
+        <p><a href="http://daum.net">다음</a></p>
+        <p><a href="http://developer.google.com">구글</a></p>
+    </div>
+    
+</body>
+</html>

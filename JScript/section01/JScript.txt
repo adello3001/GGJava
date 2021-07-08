@@ -1,3 +1,4 @@
+
 1. C/C++ -> 컴파일 -> 실행모듈 -> 독립적으로 실행
    - 시스템 프로그램
    - 핵심 모듈
@@ -37,3 +38,10 @@
      -> Node.js(JavaScript)
    - Web(WebBrowser, HTML, DOM, CSS, JS)
    - DOM(Document Object Model)
+	 
+	 
+   
+   
+
+
+
