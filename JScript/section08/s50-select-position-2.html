@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Position</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            var height = $("#p1").height();           /* 패딩과 보더를 제외한 높이 */
+            var innerHeight = $("#p1").innerHeight(); /* 보더를 제외한 높이 */
+            var outerHeight = $("#p1").outerHeight(); /* 패딩, 보더를 포함한 높이 */
+
+            var width = $("#p1").width();
+            var innerWidth = $("#p1").innerWidth();
+            var outerWidth = $("#p1").outerWidth();
+
+            console.log("width: ", width);
+            console.log("innerWidth: ", innerWidth);
+            console.log("outerWidth: ", outerWidth);
+
+            console.log("height: ", height);
+            console.log("innerHeight: ", innerHeight);
+            console.log("outerHeight: ", outerHeight);
+        });
+    </script>
+
+    <style>
+        * { padding:0;}
+
+        p {
+            display:inline-block;
+            margin:10px;
+        }
+
+        #p1, #p2 {
+            width:100px;
+            height:50px;
+            padding:20px;
+            border: 5px solid #000;
+            background-color:#ff0;
+        }
+    </style>
+</head>
+<body>
+    <h1>높이, 너비 메서드</h1>
+    <hr>
+    <div>
+        <p id="p1">좌표 지정을 위한 샘플 1</p>
+        <p id="p2">좌표 지정을 위한 샘플 2</p>
+    </div>
+</body>
+</html>

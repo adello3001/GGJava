@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery html</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            var html = $("#sec1 p").html();
+            console.log(html);
+            $("#sec1 p").html("<a href='#'>링크사이트</a>");
+        });
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <p>html(...) 선택한 요소의 하위 요소를 가져오거나 변경한다.</p>
+    <hr>
+    <section id="sec1">
+        <h2>html(...)</h2>
+        <p>내용</p>
+    </section>
+
+</body>
+</html>

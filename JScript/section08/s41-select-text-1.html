@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery text</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            var text = $("#sec1 p").text();
+            console.log(text);
+            $("#sec1 h2").text("아래의 내용이 '변경된 텍스트'로 바뀐다");
+            $("#sec1 p").text("변경된 텍스트");
+
+        });
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <p>text(...) 선택한 요소의 텍스트를 가져오거나 변경한다.</p>
+    <hr>
+    <section id="sec1">
+        <h2>text(...)</h2>
+        <p>텍스트 내용</p>
+    </section>
+
+</body>
+</html>

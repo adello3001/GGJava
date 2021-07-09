@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Object Edit</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#wrap p:eq(2)").after("<p>새항목2-1</p>");
+        });
+    </script>
+</head>
+<body>
+    <h1>객체 편집</h1>
+    <p> after: 선택한 요소의 다음 위치에 새 요소를 추가</p>
+    <hr>
+    <div id="wrap">
+        <p>항목0</p>
+        <p>항목1</p>
+        <p>항목2</p>
+        <p>항목3</p>
+    </div>
+  </body>
+</html>

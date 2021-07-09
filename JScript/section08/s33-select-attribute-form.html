@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Arrtibute State</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            var optval = $("#options :checked").val();
+            console.log(optval);
+        });
+    </script>
+</head>
+<body>
+    <h1>속성의 상태값 탐색 선택자</h1>
+    <hr>
+    <form action="#">
+        <p id="options">
+            <input type="checkbox" name="opt1" value="에어컨">에어컨
+            <input type="checkbox" name="opt2" value="네비게이션" checked>네비게이션
+            <input type="checkbox" name="opt3" value="선루프">선루프
+        </p>
+    </form>
+</body>
+</html>

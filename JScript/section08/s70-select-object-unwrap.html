@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Object Edit</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $(".c1").unwrap();
+        });
+    </script>
+    <style>
+        div {
+            background:cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>객체 편집</h1>
+    <p> $(선택).unwrap() : 선택한 요소의 부모 요소를 삭제</p>
+    <hr>
+    <div class="wrap1">
+        <h1 class="c1">제목1</h1>
+        <p class="c1">항목0</p>
+        <p class="c1">항목1</p>
+        <p class="c1">항목2</p>
+        <p class="c1">항목3</p>
+        <p class="c1">항목4</p>
+    </div>
+
+    <div class="wrap2">
+        <h1 class="c2">제목2</h1>
+        <p class="c2">항목0</p>
+        <p class="c2">항목1</p>
+        <p class="c2">항목2</p>
+        <p class="c2">항목3</p>
+        <p class="c2">항목4</p>
+    </div>
+
+  </body>
+</html>
