@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Event</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $(".btn1").on({
+                "mouseover focus" : function() {
+                    $(".btn1").css({"color":"#f00"});
+                }
+            });
+
+            /*
+            $(".btn1").click(function() {
+                alert("버튼1이 클릭되었습니다.");
+            });
+            */
+
+            $(".btn1").click();
+            $(".btn1").trigger("mouseover");
+        });
+    </script>
+</head>
+<body>
+    <h1>이벤트 - click</h1>
+    <hr>
+    <p>강제로 이벤트 발생시키기</p>
+    <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    
+</body>
+</html>
