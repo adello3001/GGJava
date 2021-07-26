@@ -11,7 +11,7 @@ public class ForStatement4 {
 
 		for(int x = 1; x <= 100; x++) {  
 			sum += x;
-			if((x % 10) == 0) {
+			if((x % 10) == 0) { // 나머지 연산자
 				System.out.printf("x(%d), sum(%d)\n", x, sum);
 			}
 		}

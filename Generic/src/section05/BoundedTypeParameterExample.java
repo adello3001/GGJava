@@ -20,6 +20,9 @@ public class BoundedTypeParameterExample {
 		
 		resultInteger = Util.compare(3.14,  0.123f);
 		System.out.println(resultInteger);
+
+		resultInteger = Util.compare(3.14,  3.14);
+		System.out.println(resultInteger);
 		
 	}
 

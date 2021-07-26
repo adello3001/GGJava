@@ -13,7 +13,7 @@ public class AnonymousExample {
 			
 			@Override
 			void wake() {
-				System.out.println("8시에 기상");
+				System.out.print("> 8시에 기상 : ");
 				study();
 			}
 		});

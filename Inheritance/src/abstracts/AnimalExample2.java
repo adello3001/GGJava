@@ -20,13 +20,16 @@ public class AnimalExample2 {
 	
 	public static void animalMove2(Animal animal) {
 		if(animal instanceof Bird) {
+			System.out.print("Bird:");
 			animal.move();
 		}
 		else if(animal instanceof Fish) {
+			System.out.print("Fish:");
 			animal.move();
 			
 		}
 		else if(animal instanceof Insect) {
+			System.out.print("Insect:");
 			animal.move();
 		}
 	}

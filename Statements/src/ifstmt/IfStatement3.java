@@ -7,7 +7,7 @@ package ifstmt;
 public class IfStatement3 {
 
 	public static void main(String[] args) {
-		int money = 1000;
+		int money = 2505;
 		
 		if(money < 1500) {
 			System.out.println("걸어 간다.");

@@ -8,7 +8,7 @@
 4. 인터페이스
 
 ----------------------------------------------
-1. 원시타입
+1. 원시타입(기본타입) : byte, char, short, int, long, float, double, boolean
    - call by value
    - 값을 전달
    

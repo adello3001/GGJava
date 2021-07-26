@@ -9,6 +9,12 @@ public class Bus extends Vehicle {
 		station++;
 	}
 	
+	public void run(int station) {
+		System.out.println("버스가 달린다." + station);
+		this.station += station;
+	}
+
+	
 	int getStation() {
 		return station;
 	}

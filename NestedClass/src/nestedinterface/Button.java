@@ -6,6 +6,10 @@
 package nestedinterface;
 
 public class Button {
+	interface OnClickListener {
+		void onClick();
+	}
+
 	OnClickListener listener;
 	OnTouchListener touchListener;
 	
@@ -31,7 +35,4 @@ public class Button {
 		}
 	}
 	
-	interface OnClickListener {
-		void onClick();
-	}
 }

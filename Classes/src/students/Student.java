@@ -7,14 +7,22 @@ class Student { // 정의(definition)
 	// 속성(특성): attribute, field, property
 	String no = "2021001";       	// 학번
 	String name = "홍길동"; 	 	// 이름
-	int age = 21; 	 	 			// 나이
+	int age; 		 	 			// 나이
 	String major = "1학년";	 		// 학년
 	String subject = "사회복지";  	// 학과
 	String handphone;				// 핸드폰
+	boolean tf;
 	
 	public static void main(String[] args) {
-		Student student = new Student();
+		Student student = new Student(true);
 		student.printInfo();
+	}
+	
+	Student() {
+	}
+	
+	Student(boolean tf) {
+		this.tf = tf;
 	}
 
 	// 메소드(함수) : method, function(클래스에 종속된 함수)
@@ -26,6 +34,8 @@ class Student { // 정의(definition)
 		System.out.println("\t> 나이: " + this.age);
 		System.out.println("\t> 학년: " + this.major);
 		System.out.println("\t> 학과: " + this.subject);
+		System.out.println("\t> 전화: " + this.handphone);
+		System.out.println("\t> 상태: " + this.tf);
 	}
 	
 	String info(String title) {

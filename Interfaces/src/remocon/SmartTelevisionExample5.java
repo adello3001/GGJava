@@ -4,6 +4,7 @@ public class SmartTelevisionExample5 {
 
 	public static void main(String[] args) {
 		Searchable stv = new SmartTelevision();
+		stv.search("LG");
 		
 		Searchable searchable = (Searchable)stv;
 		searchable.search("ezjava.com");

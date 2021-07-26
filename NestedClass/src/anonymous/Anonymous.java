@@ -8,7 +8,7 @@ public class Anonymous {
 		
 		@Override
 		void wake() {
-			System.out.println("6시에 기상");
+			System.out.print("> 6시에 기상 : ");
 			work();
 		}
 	};
@@ -21,7 +21,7 @@ public class Anonymous {
 			
 			@Override
 			void wake() {
-				System.out.println("7시에 기상");
+				System.out.print("> 7시에 기상 : ");
 				walk();
 			}
 		};

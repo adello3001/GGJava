@@ -29,17 +29,19 @@ public class Person {
 	}
 	
 	void print() {
+		System.out.println("nation : " + this.nation);
 		System.out.println("ssn : " + this.ssn);
 		System.out.println("name : " + this.name);
 	}
 
 	public static void main(String[] args) {
+		/*
 		Person p1 = new Person();
 		p1.set("987654-7654321", "외국인");
 		p1.print();
+		*/
 		
 		Person p2 = new Person("123456-1234567", "한국인");
-		// p2.nation = "미국";
 		p2.print();
 	}
 

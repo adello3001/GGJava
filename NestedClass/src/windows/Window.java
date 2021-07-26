@@ -5,7 +5,9 @@ public class Window {
 	Button button2 = new Button();
 	Button button3 = new Button();
 	
-	
+	/*
+	 * 익명 구현 객체
+	 */
 	Button.OnClickListener listener = new Button.OnClickListener() {
 		@Override
 		public void onClick() {

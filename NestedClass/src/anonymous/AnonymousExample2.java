@@ -14,7 +14,7 @@ public class AnonymousExample2 {
 			
 			@Override
 			void wake() {
-				System.out.println("5시에 기상");
+				System.out.print("> 5시에 기상 : ");
 				run();
 			}
 		};
@@ -29,7 +29,7 @@ public class AnonymousExample2 {
 			
 			@Override
 			void wake() {
-				System.out.println("4시에 기상");
+				System.out.print("> 4시에 기상 : ");
 				run();
 			}
 		});

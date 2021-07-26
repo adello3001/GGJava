@@ -12,6 +12,8 @@ public class ArrayInt3 {
 	public static void main(String[] args) {
 		int[] a = new int[4];  // 초기값을 지정하지 않으면 zero(0)으로 초기화
 		
+		System.out.printf("a: [%d], [%d], [%d], [%d]\n", a[0], a[1], a[2], a[3]);
+		
 		a[0] = 1;
 		a[1] = 3;
 		a[2] = 5;

@@ -2,7 +2,7 @@ package statics;
 
 public class Singleton2 {
 	  public static void main(String[] args) {
-	    Singleton.run();
+	    Singleton2.run();
 	  }
 
 	  private static Singleton2 singleton = new Singleton2();

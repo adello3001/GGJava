@@ -19,7 +19,8 @@ public class Calculator {
 	void println() {
 		System.out.printf("[%s]\n", this.id);
 		System.out.println("> total=" + this.total);
-		System.out.println("> pi=" + this.pi);
+		System.out.println("> this.pi=" + this.pi);
+		System.out.println("> Calculator.pi=" + Calculator.pi);
 		System.out.println();
 	}
 	

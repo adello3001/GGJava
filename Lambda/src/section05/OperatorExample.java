@@ -12,6 +12,13 @@ import java.util.function.IntBinaryOperator;
 
 public class OperatorExample {
 	private static int[] scores = { 70, 80, 90 };
+	
+	public static void main(String[] args) {
+		int result = maxTest();
+		System.out.println("maxTest:" + result);
+		maxValue();
+		minValue();
+	}
 
 	public static int maxTest() {
 		int result = scores[0];
@@ -45,12 +52,6 @@ public class OperatorExample {
 		return result;
 	}
 
-	public static void main(String[] args) {
-		int result = maxTest();
-		System.out.println("max:" + result);
-		// maxValue();
-		// minValue();
-	}
 
 	public static void maxValue() {
 		int max = maxOrMin(
@@ -64,7 +65,7 @@ public class OperatorExample {
 			}
 		);	
 		
-		System.out.println("max: " + max);
+		System.out.println("maxValue: " + max);
 	}
 
 	public static void minValue() {
@@ -77,6 +78,6 @@ public class OperatorExample {
 			}
 		});	
 		
-		System.out.println("min: " + min);
+		System.out.println("minValue: " + min);
 	}
 }

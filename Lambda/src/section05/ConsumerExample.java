@@ -16,6 +16,10 @@ public class ConsumerExample {
 		Consumer<String> consumer = t -> System.out.println(t + "8");
 		consumer.accept("Java");
 		
+		Consumer<String> consumer2 = (String t) -> System.out.println(t + "2");
+		consumer2.accept("Java");
+
+		
 		Consumer<Integer> conInteger = t -> System.out.println(t + t);
 		conInteger.accept(10);
 		

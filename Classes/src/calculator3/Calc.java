@@ -30,6 +30,12 @@ class Calc {
 	}
 	
 	void plus(int ... values) { // 가변인자
+		System.out.println("values.length:" + values.length);
+		/*
+		for(int x=0; x < values.length; x++) {
+			total += values[x];
+		}
+		*/
 		for(int x : values) {
 			total += x;
 		}

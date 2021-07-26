@@ -24,10 +24,10 @@ public class ArrayInt6 {
 			System.out.printf("b[%d]=[%d]\n", col, b[col]);
 		}
 		
-		System.out.println("[x]");
+		System.out.println("[c]");
 		System.arraycopy(a, 0, c, 0, a.length);
 		for(int colx : c) {
-			System.out.printf("x=[%d]\n", colx);
+			System.out.printf("c=[%d]\n", colx);
 		}
 		
 		

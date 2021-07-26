@@ -1,11 +1,11 @@
 package students3;
 
 public class Student {
-	String no;
-	String name;
-	int age = -1;
+	String no;       // 학번
+	String name;     // 이름
+	int age = -1;    // 나이
 	
-	School school = new School();
+	School school = new School();  // 학교정보
 	
 	/*
 	String schoolname;

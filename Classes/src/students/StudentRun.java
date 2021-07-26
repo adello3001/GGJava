@@ -12,14 +12,14 @@ public class StudentRun {
 		StudentRun strun = new StudentRun(); // 선언(declare)
 		System.out.println(strun.me);
 		
-		Student student = new Student(); // 선언(declare)
-		student.printInfo();
+		Student student1 = new Student(); // 선언(declare)
+		student1.printInfo();
 		
-		String info = student.info("정보");
+		String info = student1.info("정보");
 		System.out.println(info);
 		
 		Student student2 = new Student();
-		System.out.println("(student == student2) ? " + (student == student2));
+		System.out.println("(student == student2) ? " + (student1 == student2));
 				
 	}
 

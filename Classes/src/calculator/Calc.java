@@ -17,9 +17,13 @@ class Calc {
 	Calc() {
 		total = 0;
 	}
-	
+		
 	Calc(int total) {
 		this.total = total;
+	}
+	
+	Calc(float total) {
+		this.total = (int)total;
 	}
 	
 	Calc(Calc calc) {

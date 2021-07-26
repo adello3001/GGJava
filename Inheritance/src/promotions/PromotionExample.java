@@ -25,16 +25,6 @@ public class PromotionExample {
 		
 		B b1 = d;
 		C c1 = e;
-
-		// Type mismatch: cannot convert
-		/*
-		B b2 = c;
-		C c2 = b;
-		B b3 = e;
-		C c3 = d;
-		D d2 = e;
-		E e2 = d;
-		*/
 	}
 
 }

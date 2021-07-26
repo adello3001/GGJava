@@ -16,7 +16,7 @@ public class ArithOper {
 		String str3 = str1 + " " + str2 + "!!!";
 		System.out.println(str3);
 		
-		String str4 = str3 + 99;
+		String str4 = str3 + 99; // 문자열 + 숫자, 숫자는 문자열로 변환되어 결합
 		System.out.println(str4);
 		
 		

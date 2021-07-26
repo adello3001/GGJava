@@ -2,7 +2,7 @@
 
 1. Java8부터 지원
 2. 함수적 프로그래밍
-3. 병렬처리와 이벤트 지행 프로그래밍에 적합
+3. 병렬처리와 이벤트 지향 프로그래밍에 적합
 4. 익명함수를 생성하기 위한 식
 5. 코드가 간결하고 컬렉션의 요소를 필터링하거나 매핑
 6. 익명 구현 객체
@@ -14,7 +14,7 @@
 
 (람다식 기본 문법)
    (타입 매개변수, ...) -> { 실행문; ... }
-   Class class = (int a) -> { System.out.println(a) }
+   Class class = (int a) -> { System.out.println(a); return object; }
 
 (익명구현객체)
    Class class = new Class() {

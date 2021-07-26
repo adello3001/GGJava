@@ -23,7 +23,7 @@ public class Singleton {
 	static void run() {
 		System.out.println("Singleton: run()");
 		
-		Singleton s1 = new Singleton();		// 자신의 클래스에서는 private이어도 접근 가능
+		Singleton s1 = new Singleton(99);		// 자신의 클래스에서는 private이어도 접근 가능
 		
 		Singleton s2 = Singleton.getInstance();
 		Singleton s3 = Singleton.getInstance();

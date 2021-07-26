@@ -2,7 +2,7 @@ package remocon;
 
 public class Television implements RemoteControl {
 	private int volumn;
-	private String model;
+	private String model = "TV";
 	
 	Television() {}
 	Television(String model) {

@@ -1,7 +1,7 @@
 package remocon;
 
 public interface RemoteControl {
-	// 상수: 관례적으로 대문자
+	// 상수: 관례적으로 대문자(public static final)
 	public static final int RC_VALUE = 5;
 	public int MAX_VALUE = 10;
 	public int MIN_VALUE = 0;

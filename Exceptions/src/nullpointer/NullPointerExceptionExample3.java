@@ -13,8 +13,6 @@ public class NullPointerExceptionExample3 {
 		}
 		catch(NullPointerException ex) {
 			System.out.println("data is null");
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
 		}
 		
 		System.out.println("THE END");

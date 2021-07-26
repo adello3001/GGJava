@@ -15,6 +15,10 @@ public class MyFunctionalInterfaceExample {
 		
 		myfunc.method();
 		
+		// new MyFunctionalInterfaceExample().localImplements();
+		// MyFunctionalInterfaceExample example = new MyFunctionalInterfaceExample();
+		// example.localImplements();
+		
 		localImplements();
 		callInnerClass();
 	}

@@ -20,7 +20,7 @@ public class ComsumerAndThenExample {
 
 		System.out.println("[andThen]");
 		Consumer<Member> consumerAB = consumerA.andThen(consumerB);
-		consumerAB.accept(new Member("홍길동", "HongGilDong", null)); 
+		consumerAB.accept(new Member("전우치", "JeonWooChi", null)); 
 	}
 
 }

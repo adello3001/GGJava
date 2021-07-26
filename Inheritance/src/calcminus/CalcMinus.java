@@ -26,5 +26,14 @@ public class CalcMinus extends Calc {
 
 		// CalcMinus는 Calc로부터 상속되었기 때문에 Calc.sum에 접근할 수 있다.
 		System.out.println("Calc:sum=" + calc.sum); 
+		
+		// Calc.prevsum 디폴트 접근자로 선언된 필드는 자식 클래스에서 접근할 수 없다.
+		// System.out.println("Calc:prevsum=" + calc.prevsum);
+		
+		// Calc.privsum 비공개 접근자로 선언된 필드는 자식 클래스에서 접근할 수 없다.
+		// System.out.println("Calc:privsum=" + calc.privsum);
+		
+		System.out.println("Calc:privsum=" + calc.getPrivSum()); 
+
 	}
 }

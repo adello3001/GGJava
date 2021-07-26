@@ -9,7 +9,7 @@ public class ForStatement6a {
 	public static void main(String[] args) {
 		int two_sum = 0;
 		
-		for(int cnt=2; cnt <= 100; cnt += 2) {
+		for(int cnt=2; cnt <= 100; cnt += 2) { // cnt: 2,4,6,8, ... 98, 100
 			two_sum += cnt;
 			System.out.printf("2¹è¼ö(%d), ÇÕ(%d)%n", cnt, two_sum);
 		}

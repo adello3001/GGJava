@@ -1,9 +1,10 @@
 package swstmt;
 /*
- * 조건문(switch)
- * case 정수:     -> case 1,2,3:
- * case 문자:     -> case 'a', 'A':
- * case 문자열:   -> case "abc":
+ * switch(조건문) {
+ *   case 정수:     -> case 1,2,3:
+ *   case 문자:     -> case 'a', 'A':
+ *   case 문자열:   -> case "abc":
+ * }
  */
 public class SwitchStatement1 {
 

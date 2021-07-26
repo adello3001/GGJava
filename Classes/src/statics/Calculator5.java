@@ -34,5 +34,8 @@ public class Calculator5 {
 	public static void main(String[] args) {
 		Calculator5.addStaticCount(10);
 		Calculator5.printStaticCount();
+		
+		System.out.println("---> Calculator5.static_count=" + Calculator5.static_count);
+		// System.out.println("---> Calculator5.value=" + Calculator5.value);
 	}
 }

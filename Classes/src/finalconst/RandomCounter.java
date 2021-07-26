@@ -7,7 +7,7 @@
 package finalconst;
 
 public class RandomCounter {
-	static final int MAX_RANDOM_COUNT = 100;
+	static final int MAX_RANDOM_COUNT = 1000;
 	
 	int[] values = new int[MAX_RANDOM_COUNT];
 	
