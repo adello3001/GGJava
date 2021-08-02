@@ -22,13 +22,13 @@ public class RootController implements Initializable {
 		sliderFX.valueProperty().addListener(new ChangeListener<Number>() {
 
 			@Override
-			public void changed(ObservableValue<? extends Number> observable,
+			public void changed(ObservableValue<? extends Number> observable, 
 					Number oldValue, Number newValue) {
-				System.out.printf("sliderFX.valueProperty: old(%f), new(%f)\n",
+				System.out.printf("sliderFX.valueProperty: old(%f), new(%f)\n", 
 						oldValue.doubleValue(), newValue.doubleValue());
 				labelFX.setFont(new Font(newValue.doubleValue()));
-				
 			}
+			
 		});
 	}
 }

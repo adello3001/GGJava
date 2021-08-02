@@ -8,12 +8,13 @@ Button {
 	-fx-padding: 20;
 }
 
-#labelId {
+
+#labelOne {
 	-fx-background-color: black;
 	-fx-text-fill: yellow;
 }
 
-.labelClass {
+.labelClassX {
 	-fx-background-color: blue;
 	-fx-text-fill: white;
 }

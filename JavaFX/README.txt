@@ -1,5 +1,8 @@
 [JavaFX]
 
+(Eclipse)
+Preferences:/Run/Debug:String Substitution
+PATH_TO_JAVAFX : D:\JWorkspace\EZJava\javafx-sdk-11.0.2\lib
 
 https://docs.oracle.com/javase/8/javafx/api/toc.htm
 

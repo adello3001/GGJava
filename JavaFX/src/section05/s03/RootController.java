@@ -16,6 +16,7 @@ public class RootController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		/*
 		btnOk.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
@@ -25,6 +26,7 @@ public class RootController implements Initializable {
 		
 		btnCancel.setOnAction(event -> System.out.println("Cancel!!!"));
 		btnExit.setOnAction(event -> System.out.println("Exit!!!"));
+		*/
 	}
 	
 	public void handleBtnOk(ActionEvent event) {
@@ -34,8 +36,9 @@ public class RootController implements Initializable {
 	public void handleBtnCancel(ActionEvent event) {
 		System.out.println("[Cancel]!!!!");
 	}
-	
+
 	public void handleBtnExit(ActionEvent event) {
 		System.out.println("[Exit]!!!!");
 	}
+
 }

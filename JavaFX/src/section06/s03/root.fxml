@@ -3,6 +3,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.shape.*?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
@@ -11,7 +12,7 @@
 	prefHeight="200.0" prefWidth="300.0">
 	
 	<children>
-		<Circle fx:id="circle" fill="DODGERBLUE" radius="50.0" stroke="BLACK"/>
+		<Circle fx:id="circle" fill="DODGERBLUE" radius="50.0"  centerX="100" centerY="150" stroke="RED"/>
 	</children>
 	
 </AnchorPane>	

@@ -2,7 +2,7 @@
  * 입력 컨트롤
  * - TextField
  * - TextArea
- * - passwordField
+ * - PasswordField
  * - ComboBox
  * - DatePicker
  * - ColorPicker
@@ -15,7 +15,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 
 public class InputControls extends Application {
 

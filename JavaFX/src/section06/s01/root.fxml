@@ -9,7 +9,7 @@
 	fx:controller="section06.s01.RootController"
 	prefHeight="300.0" prefWidth="400.0">
 	
-	<center>
+	<center>	
 		<Label fx:id="labelFX" text="JavaFX">
 			<Font size="0"/>
 		</Label>

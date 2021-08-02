@@ -14,9 +14,9 @@
 	</padding>
 	
 	<children>
-		<Label text="원본"/>
+		<Label text="원본:"/>
 		<TextArea fx:id="textArea1"/>
-		<Label text="사본"/>
+		<Label text="사본:"/>
 		<TextArea fx:id="textArea2"/>
 	</children>
 	
