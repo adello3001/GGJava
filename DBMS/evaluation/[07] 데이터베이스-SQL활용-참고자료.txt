@@ -1,0 +1,96 @@
+
+-- 참조키가 있으면 참조하는 테이블부터 삭제해야 한다.
+DROP TABLE STUDENT;
+DROP TABLE PROFESSION;
+ 
+-- Profession(교수코드, 교수이름, 학과)
+CREATE TABLE profession (
+	professor VARCHAR(5) CONSTRAINT professsion_pk PRIMARY KEY,
+	proname VARCHAR2(20),
+	subject VARCHAR2(20)
+);
+
+-- Student(학번, 이름, 학과, 전화번호, 우편번호, 주소, 담당교수)
+CREATE TABLE student (
+	sno VARCHAR2(5) CONSTRAINT student_pk PRIMARY KEY,
+	sname VARCHAR2(20),
+	subject VARCHAR2(20),
+	telno VARCHAR2(15),
+	postcd CHAR(5),
+	address VARCHAR2(50)
+);
+
+-- 테이블(Student)에 열 담당교수이름(문자열 1자리)을 추가한다.
+-- 테이블(Student)에 추가한 열(담당교수이름)의 문자열 크기를 20자리로 변경한다.-- 
+ALTER TABLE student ADD professor VARCHAR2(1);
+ALTER TABLE student MODIFY professor VARCHAR2(5);
+
+  
+-- Student(학번, 이름, 학과, 전화번호, 우편번호, 주소, 담당교수)
+CREATE TABLE student (
+	sno VARCHAR2(5) CONSTRAINT student_pk PRIMARY KEY,
+	sname VARCHAR2(20),
+	subject VARCHAR2(20),
+	telno VARCHAR2(15),
+	postcd CHAR(5),
+	address VARCHAR2(50),
+	professor VARCHAR(5) CONSTRAINT professor_fk REFERENCES profession(professor)
+);
+
+------------------------------------------------------------------------
+-- Student(학번, 이름, 학과, 전화번호, 우편번호, 주소, 담당교수)
+CREATE TABLE student (
+	sno VARCHAR2(5) CONSTRAINT student_pk PRIMARY KEY,
+	sname VARCHAR2(20),
+	subject VARCHAR2(20),
+	telno VARCHAR2(15),
+	postcd CHAR(5),
+	address VARCHAR2(50),
+	professor VARCHAR(5)
+);
+
+-- 테이블 생성 후 참조키 생성
+ALTER TABLE student
+	ADD CONSTRAINT professor_fk FOREIGN KEY (professor)
+	REFERENCES profession(professor);
+
+-- 참조키 삭제
+ALTER TABLE student DROP CONSTRAINT professor_fk;
+
+
+
+------------------------------------------------------------------------
+CREATE TABLE student (
+	sno VARCHAR2(5),
+	sname VARCHAR2(20),
+	subject VARCHAR2(20),
+	telno VARCHAR2(15),
+	postcd CHAR(5),
+	address VARCHAR2(50),
+	professor VARCHAR(5),
+	CONSTRAINT student_pk PRIMARY KEY(sno),
+	CONSTRAINT professor_fk FOREIGN KEY (professor)	REFERENCES profession(professor)
+);
+
+------------------------------------------------------------------------
+CREATE TABLE student (
+	sno VARCHAR2(5),
+	sname VARCHAR2(20),
+	subject VARCHAR2(20),
+	telno VARCHAR2(15),
+	postcd CHAR(5),
+	address VARCHAR2(50),
+	professor VARCHAR(5),
+	CONSTRAINT student_pk PRIMARY KEY(sno),
+	CONSTRAINT professor_fk FOREIGN KEY (professor)	REFERENCES profession(professor)
+);
+
+CREATE TABLE student (
+	sno VARCHAR2(5) PRIMARY KEY,
+	sname VARCHAR2(20),
+	subject VARCHAR2(20),
+	telno VARCHAR2(15),
+	postcd CHAR(5),
+	address VARCHAR2(50),
+	professor VARCHAR(5) REFERENCES profession(professor)
+);

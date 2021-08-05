@@ -1,0 +1,47 @@
+-- 테이블 사원정보(emp)에서 job별로 사원수를 집계하는 SELECT문 작성한다.
+
+-- 사원정보를 job 단위 정렬
+SELECT * FROM emp ORDER BY job;
+
+-- 총 사원수
+SELECT count(*) FROM emp;
+
+-- UNION ALL
+SELECT 'ANALYST', count(*) as jobcnt FROM emp WHERE job = 'ANALYST'
+UNION ALL
+SELECT 'Academy', count(*) as jobcnt  FROM emp WHERE job = 'Academy'
+UNION ALL
+SELECT 'Arch', count(*) as jobcnt  FROM emp WHERE job = 'Arch'
+UNION ALL
+SELECT 'CLERK', count(*) as jobcnt  FROM emp WHERE job = 'CLERK'
+UNION ALL
+SELECT 'MANAGER', count(*) as jobcnt  FROM emp WHERE job = 'MANAGER'
+UNION ALL
+SELECT 'PRESIDENT', count(*) as jobcnt  FROM emp WHERE job = 'PRESIDENT'
+UNION ALL
+SELECT 'SALESMAN', count(*) as jobcnt  FROM emp WHERE job = 'SALESMAN';
+
+-- GROUP BY
+SELECT sum(jobcnt) FROM 
+(SELECT count(*) as jobcnt FROM emp GROUP BY job);
+
+SELECT count(*) as jobcnt FROM emp GROUP BY job;
+
+SELECT job, count(*) as jobcnt FROM emp GROUP BY job;
+
+-- 검증
+SELECT sum(jobcnt) 
+    FROM (SELECT job, count(*) as jobcnt FROM emp GROUP BY job);
+
+
+-- 테이블 사원정보(emp)에서 job별로 사원수를 집계하는 VIEW문 작성한다.
+CREATE VIEW view_emp_jobcnt
+    AS SELECT job, count(*) as jobcnt FROM emp GROUP BY job;
+
+-- 사전 DICT(TAB)을 통해서 확인
+SELECT * FROM tab WHERE tname in('EMP', 'VIEW_EMP_JOBCNT');
+DESC view_emp_jobcnt;
+
+-- View(view_emp_jobcnt) 테이블을 통해서 검색
+SELECT * FROM view_emp_jobcnt;
+

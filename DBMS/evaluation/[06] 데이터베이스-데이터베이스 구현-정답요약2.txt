@@ -1,0 +1,83 @@
+-- 테이블 목록
+SELECT * FROM tab;
+
+DROP TABLE student;
+
+-- 테이블 Student를 생성한다. (학번, 이름, 학과, 전화번호, 우편번호, 주소)
+CREATE TABLE student (
+    sno VARCHAR2(10),
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50)
+);
+
+CREATE TABLE student (
+    sno VARCHAR2(10) NOT NULL,
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50)
+);
+
+-- INSERT INTO student (sno, sname, subject, telno, pastcd, address) VALUES( ...); 
+INSERT INTO student (sno, sname) VALUES('12345', '황진이'); 
+
+CREATE TABLE student (
+    sno VARCHAR2(10) CONSTRAINT student_pk PRIMARY KEY, -- 메인키
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50)
+);
+
+CREATE TABLE student (
+    sno VARCHAR2(10),
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50),
+    CONSTRAINT student_pk PRIMARY KEY(sno) -- 메인키(학번)
+);
+
+-- 테이블을 생성 후에 메인키를 생성하는 방법
+CREATE TABLE student (
+    sno VARCHAR2(10),
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50)
+);
+
+ALTER TABLE student ADD CONSTRAINT student_pk PRIMARY KEY(sno);
+ALTER TABLE student DROP PRIMARY KEY;
+
+DROP TABLE student;
+CREATE TABLE student (
+    sno VARCHAR2(10),
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50)
+);
+
+-- 여러 컬럼을 하나의 메인키로 생성
+ALTER TABLE student ADD CONSTRAINT student_pk PRIMARY KEY(sno, telno);
+ALTER TABLE student DROP PRIMARY KEY;
+
+-- 제약조건 이름을 지정하지 않는 경우
+CREATE TABLE student (
+    sno VARCHAR2(10) PRIMARY KEY,
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50)
+);
+

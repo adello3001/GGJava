@@ -1,0 +1,55 @@
+ /*
+ 3. 아래 두 개의 테이블 학생(Student), 교수(Profession)을 만들고 SQL문을 기술한다.
+   - Student(학번, 이름, 학과, 전화번호, 우편번호, 주소, 담당교수)
+   - Profession(교수코드, 교수이름, 학과)
+   - Student와 Profession은 제약조건으로 참조키로 연결한다.
+   - Student과 Profession은 조인하여 학생정보와 담당교수 정보를 출력한다.
+ */
+ 
+ DROP TABLE profession;
+ DROP TABLE student;
+ 
+ -- 교수 테이블
+ -- professor 컬럼은 메인키(Primary Key)이거나, Unique Key로 설정되어 있어야 한다.
+ CREATE TABLE profession (
+    professor VARCHAR2(5) CONSTRAINT profession_pk PRIMARY KEY,
+    proname VARCHAR2(20),
+    subject VARCHAR2(20)
+ );
+ 
+ INSERT INTO profession VALUES('P1010', '박지원', '소프트웨어');
+ INSERT INTO profession VALUES('P2020', '박형선', '소프트웨어');
+ 
+ -- 교수 테이블의 교수코드 참조
+CREATE TABLE student (
+    sno VARCHAR2(10) CONSTRAINT student_pk PRIMARY KEY, -- 메인키
+    sname VARCHAR2(20),
+    subject VARCHAR2(20),
+    telno VARCHAR2(20),
+    postcd CHAR(5),
+    address VARCHAR2(50),
+    professor VARCHAR2(5) REFERENCES profession(professor)
+);
+
+INSERT INTO student (sno, sname) VALUES('3000', '삼식이');
+INSERT INTO student (sno, sname, professor) VALUES('4010', '사미자', 'P1010');
+
+SELECT * FROM student;
+SELECT * FROM profession;
+-- 학생테이블과 교수테이블을 조인해서 검색
+SELECT s.sno, s.sname, p.professor, p.proname, p.subject
+    FROM student s, profession p
+    WHERE s.professor = p.professor;
+
+commit;
+
+DELETE FROM student;
+DELETE FROM student WHERE sno = '1000';
+DELETE FROM student WHERE sno = '1010';
+ROLLBACK;
+
+-- 학생테이블에서 참조
+DELETE FROM profession;
+DELETE FROM profession WHERE professor = 'P1010';
+DELETE FROM profession WHERE professor = 'P2020';
+

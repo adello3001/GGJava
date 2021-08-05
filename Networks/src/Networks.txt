@@ -58,3 +58,5 @@
    - 용도: 발신자가 일방적으로 데이터를 발신하고 누가 수신하는지 검증할 필요가 없을 때 사용
    
    
+9. JavaFX(Run/Debug Setting)
+   --module-path ${PATH_TO_JAVAFX} --add-modules=javafx.controls,javafx.fxml   
