@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Timeout</title>
+    <script>
+        /*
+        // setTimeout()   : 지정된 시간이 되면 등록된 함수의 코드를 실행하고 종료
+        // clearTimeout() : setTimeout()을 취소
+        // var 타임아웃변수 = setTimeout(...)
+        // clearTimeout(타임아웃변수)
+        */
+        var sum = 0;
+        var sumtimeout = setTimeout(function() { // 5초(5000ms)후에 실행
+            for(var cnt=1; cnt<=10; cnt++) {
+                sum += cnt;
+            }
+            console.log("sum=", sum, '<br>');
+        }, 5000);
+    </script>
+</head>
+<body>
+    <h2>타입아웃(timeout) 테스트</h2>
+    <button onclick="clearTimeout(sumtimeout)">작업취소</button>
+    
+</body>
+</html>

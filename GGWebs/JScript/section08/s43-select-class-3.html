@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Class</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#p2").text("p1: " + $("#p1").hasClass("red")); /* hasClass(...) -> true or flase */
+            $("#p3").text("p1: " + $("#p1").hasClass("aqua")); /* hasClass(...) -> true or flase */
+        });
+    </script>
+
+    <style>
+        .red { background-color: #f00; }
+        .green { background-color: #0f0; }
+        .blue { background-color: #00f; }
+        .yellow { background-color: #ff0; }
+        .aqua { background-color: #0ff; }
+    </style>
+</head>
+<body>
+    <h1>클래스 속성값 추가 및 변경</h1>
+    <hr>
+    <p id="p1" class="aqua">아쿠아</p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+</body>
+</html>

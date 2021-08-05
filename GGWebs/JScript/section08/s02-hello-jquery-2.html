@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Hello</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <p>바디의 태그가 실행된 후에 제이쿼리 코드를 배치하면
+        태크가 생성되어 스크립트 코드가 실행되므로
+        스크립트에서 id(#hello)를 찾아 정상적으로 실행된다.
+    </p>
+    <hr>
+    <h1 id="hello">제이쿼리의 세계에 오신 것을 환영합니다.</h1>
+
+    <script>
+        $("#hello").css("color", "blue");
+    </script>
+</body>
+</html>

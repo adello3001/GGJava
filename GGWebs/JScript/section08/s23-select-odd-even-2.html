@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Odd</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#list").css("border", "2px solid #f0f");
+            $("#list tr:odd").css("background", "#bbb");
+            $("#list tr:even").css("background", "#bb0");
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <p>탐색 선택자는 기본 선택자로 선택을 한 후에 한 번 더 탐색을 해서
+        필터링 하는 역할을 한다.
+    </p>
+    <hr>
+    <p>메뉴 항목에서 홀수, 짝수 요소를 선택, 항목의 시작은 0부터</p>
+    <table id="list">
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+        </tr>
+    </table>
+</body>
+</html>

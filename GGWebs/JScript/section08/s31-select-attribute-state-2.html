@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Arrtibute State</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#wrap p:visible").css({
+                "display":"none"
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>속성의 상태값 탐색 선택자</h1>
+    <hr>
+    <div id="wrap">
+        <p>태그의 숨겨진 상태값에 의한 탐색</p>
+        <p>상태값은 visible or hidden</p>
+    </div>
+</body>
+</html>

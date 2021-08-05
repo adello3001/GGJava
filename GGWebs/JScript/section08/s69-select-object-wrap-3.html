@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Object Edit</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $(".c1").wrapAll("<div />");
+            $(".c2").wrapAll("<div />");
+        });
+    </script>
+    <style>
+        div {
+            background:cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>객체 편집</h1>
+    <p> $(선택).wrapAll(새요소) : 선택한 요소를 하나로 그룹핑하여 새로운 요소로 감쌈</p>
+    <hr>
+    <h1 class="c1">제목1</h1>
+    <p class="c1">항목0</p>
+    <p class="c1">항목1</p>
+    <p class="c1">항목2</p>
+    <p class="c1">항목3</p>
+    <p class="c1">항목4</p>
+
+    <h1 class="c2">제목2</h1>
+    <p class="c2">항목0</p>
+    <p class="c2">항목1</p>
+    <p class="c2">항목2</p>
+    <p class="c2">항목3</p>
+    <p class="c2">항목4</p>
+
+  </body>
+</html>

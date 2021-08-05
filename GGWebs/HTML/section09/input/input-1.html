@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputa">+
+    <input type="text" id="inputb">
+    <button onclick="output_sum()">=</button>
+    <input type="text" id="output">
+    
+    <script type="text/javascript">
+        function output_sum() {
+            var inputa = document.getElementById("inputa").value;
+            var inputb = document.getElementById("inputb").value;
+            var sum = parseInt(inputa) + parseInt(inputb);
+            document.getElementById("output").value = sum;
+        }
+    </script>
+</body>
+</html>

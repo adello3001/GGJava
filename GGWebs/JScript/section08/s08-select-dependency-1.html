@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Dependency</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("p#desc").css("border", "3px solid #ccc")
+                .css("background", "#bbb");
+        });
+    </script>
+</head>
+<body>
+    <h1>종속 선택자</h1>
+    <hr>
+    <h2>종속 선택자 예제</h2>
+    <h3>선택된 태그의 id(desc)나 클래스(class) 태그를 선택한다.</h3>
+    <hr>
+    <p id="desc">선택된 태그의 종속된 id나 class의 값이 일치하는 요소들을 선택하여
+        스타일을 적용한다.
+    </p>
+    <p>이 내용은 스타일이 적용되지 않은 태그입니다.</p>
+</body>
+</html>
